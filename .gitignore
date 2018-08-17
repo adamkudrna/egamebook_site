@@ -1,0 +1,4 @@
+_site
+.sass-cache/*
+.jekyll-metadata
+.full_build.intermediate
