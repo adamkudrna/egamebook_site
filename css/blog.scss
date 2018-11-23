@@ -1,14 +1,14 @@
 ---
 ---
 
-@import "settings";
-@import "normalize";
-@import "syntax";
-// @import "foundation";
+@import "blog/settings";
+@import "blog/normalize";
+@import "blog/syntax";
+// @import "blog/foundation";
 
-@import 'foundation/components/grid',
-		'foundation/components/labels',
-		'foundation/components/panels';
+@import 'blog/foundation/components/grid',
+		'blog/foundation/components/labels',
+		'blog/foundation/components/panels';
 
 // Or selectively include components
 // @import
@@ -48,7 +48,7 @@
 //   "../_sass/foundation/components/offcanvas",
 //   "../_sass/foundation/components/visibility";
 
-@import 'main';
-@import 'blog';
+@import 'blog/main';
+@import 'blog/blog';
 
 // @import '../_sass/_debug';
