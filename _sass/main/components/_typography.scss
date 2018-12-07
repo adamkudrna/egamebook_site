@@ -1,0 +1,19 @@
+.typography-master-headline {
+    @include typography(master-headline);
+}
+
+.typography-master-subheadline {
+    @include typography(master-subheadline);
+}
+
+.typography-headline {
+    @include typography(headline);
+}
+
+.typography-subheadline {
+    @include typography(subheadline);
+}
+
+.typography-title {
+    @include typography(title);
+}

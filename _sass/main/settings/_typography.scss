@@ -1,0 +1,143 @@
+$typography-font-family-sans-serif: 'Libre Franklin', helvetica, arial, sans-serif;
+$typography-font-family-serif: 'Libre Baskerville', georgia, times, serif;
+
+$typography-font-weight-values: (
+    thin: 100,
+    regular: 400,
+    bold: 700,
+    black: 900,
+);
+
+$typography-font-size-base: 100%;
+$typography-line-height-base: 1.75rem;
+
+$typography-scale: (
+    -1: 0.875rem, // 14 px
+    0: 1.125rem, // 18 px
+    1: 1.25rem, // 20 px
+    2: 1.5rem, // 24 px
+    3: 1.75rem, // 28 px
+    4: 1.875rem, // 30 px
+    5: 2.25rem, // 36 px
+    6: 3rem, // 48 px
+    7: 3.5rem, // 56 px
+    8: 4.5rem, // 72 px
+    9: 6rem, // 96 px
+);
+
+$typography-styles: (
+    master-headline: (
+        default: (
+            margin-bottom: 2 * $typography-line-height-base,
+            font-weight: map-get($typography-font-weight-values, black),
+            font-size: map-get($typography-scale, 6),
+            line-height: 2 * $typography-line-height-base,
+            font-family: $typography-font-family-sans-serif,
+            letter-spacing: -0.025em,
+            text-transform: uppercase,
+        ),
+        breakpoints: (
+            sm: (
+                margin-bottom: 3 * $typography-line-height-base,
+                font-size: map-get($typography-scale, 8),
+                line-height: 3 * $typography-line-height-base,
+            ),
+            md: (
+                margin-bottom: 4 * $typography-line-height-base,
+                font-size: map-get($typography-scale, 9),
+                line-height: 4 * $typography-line-height-base,
+            ),
+        ),
+    ),
+    master-subheadline: (
+        default: (
+            font-weight: map-get($typography-font-weight-values, thin),
+            font-size: map-get($typography-scale, 2),
+            line-height: 2 * $typography-line-height-base,
+            font-family: $typography-font-family-sans-serif,
+            letter-spacing: 0.05em,
+            text-transform: uppercase,
+        ),
+        breakpoints: (
+            sm: (
+                font-size: map-get($typography-scale, 6),
+                line-height: 2 * $typography-line-height-base,
+            ),
+            md: (
+                font-size: map-get($typography-scale, 7),
+                line-height: 3 * $typography-line-height-base,
+            ),
+        ),
+    ),
+    headline: (
+        default: (
+            margin-bottom: 2 * $typography-line-height-base,
+            font-weight: map-get($typography-font-weight-values, black),
+            font-size: map-get($typography-scale, 4),
+            line-height: $typography-line-height-base,
+            font-family: $typography-font-family-sans-serif,
+            letter-spacing: -0.01em,
+            text-transform: uppercase,
+        ),
+        breakpoints: (
+            sm: (
+                font-size: map-get($typography-scale, 6),
+                line-height: 2 * $typography-line-height-base,
+            ),
+            md: (
+                font-size: map-get($typography-scale, 7),
+            ),
+        ),
+    ),
+    subheadline: (
+        default: (
+            font-weight: map-get($typography-font-weight-values, regular),
+            font-size: map-get($typography-scale, 1),
+            line-height: $typography-line-height-base,
+            font-family: $typography-font-family-serif,
+            font-style: italic,
+            text-transform: none,
+        ),
+        breakpoints: (
+            sm: (
+                font-size: map-get($typography-scale, 2),
+            ),
+            md: (
+                font-size: map-get($typography-scale, 3),
+                line-height: 2 * $typography-line-height-base,
+            ),
+        ),
+    ),
+    title: (
+        default: (
+            margin-bottom: 4 * $typography-line-height-base,
+            font-weight: map-get($typography-font-weight-values, black),
+            font-size: map-get($typography-scale, 1),
+            line-height: $typography-line-height-base,
+            font-family: $typography-font-family-sans-serif,
+            letter-spacing: 0.05em,
+            text-transform: uppercase,
+            text-align: right,
+        ),
+        breakpoints: (
+            md: (
+                font-size: map-get($typography-scale, 3),
+                line-height: $typography-line-height-base,
+            ),
+        ),
+    ),
+    body: (
+        default: (
+            font-weight: map-get($typography-font-weight-values, regular),
+            font-size: map-get($typography-scale, 0),
+            line-height: $typography-line-height-base,
+            font-family: $typography-font-family-serif,
+        ),
+    ),
+    small: (
+        default: (
+            font-size: map-get($typography-scale, -1),
+            line-height: $typography-line-height-base,
+        ),
+    ),
+);

@@ -1,0 +1,10 @@
+html {
+    font-size: $typography-font-size-base;
+}
+
+body {
+    @include typography(body);
+
+    color: map-get($colors-grays, black);
+    background-color: map-get($colors-grays, white);
+}
