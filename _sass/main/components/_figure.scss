@@ -5,7 +5,7 @@
     overflow: hidden;
 
     &:not(:last-child) {
-        margin-bottom: $typography-line-height-base;
+        margin-bottom: spacing(1);
     }
 }
 
@@ -24,17 +24,17 @@
 
 .figure--scene .figure__media {
     max-width: 26rem;
-    height: 14 * $typography-line-height-base;
+    height: spacing(14);
     margin-right: auto;
     margin-left: auto;
 
     @include breakpoint-up(md) {
         max-width: none;
-        height: 17 * $typography-line-height-base;
+        height: spacing(17);
     }
 
     @include breakpoint-up(lg) {
-        height: 21 * $typography-line-height-base;
+        height: spacing(21);
     }
 }
 
@@ -47,10 +47,10 @@
 }
 
 .figure--portrait .figure__media {
-    height: 16 * $typography-line-height-base;
+    height: spacing(16);
 
     @include breakpoint-up(lg) {
-        height: 19 * $typography-line-height-base;
+        height: spacing(19);
     }
 }
 

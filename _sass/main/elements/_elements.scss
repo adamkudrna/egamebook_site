@@ -18,7 +18,7 @@ ul li,
 ol li,
 dd {
     &:not(:last-child) {
-        margin-bottom: $typography-line-height-base;
+        margin-bottom: spacing(1);
     }
 }
 

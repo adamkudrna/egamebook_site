@@ -4,20 +4,21 @@
 // Settings
 @import "main/settings/breakpoints";
 @import "main/settings/colors";
-@import "main/settings/typography";
 @import "main/settings/fonts";
+@import "main/settings/typography";
 
 // Tools
 @import "main/tools/breakpoints";
+@import "main/tools/spacing";
 @import "main/tools/typography";
 
 // Generic
-@import "main/generic/reset";
 @import "main/generic/box-sizing";
+@import "main/generic/reset";
 
 // Elements
 @import "main/elements/elements";
 
 // Components
-@import "../_sass/main/components/figure";
-@import "../_sass/main/components/typography";
+@import "main/components/figure";
+@import "main/components/typography";
