@@ -28,6 +28,8 @@ $typography-scale: (
     9: 6rem, // 96 px
 );
 
+$typography-body-baseline-compensation: 0.5rem;
+
 $typography-styles: (
     master-headline: (
         default: (
@@ -155,8 +157,8 @@ $typography-styles: (
     ),
     body: (
         default: (
-            padding-top: 0.5rem,
-            margin-bottom: spacing(1) - 0.5rem,
+            padding-top: $typography-body-baseline-compensation,
+            margin-bottom: spacing(1) - $typography-body-baseline-compensation,
             font-weight: map-get($typography-font-weight-values, regular),
             font-size: map-get($typography-scale, 0),
             line-height: spacing(1),

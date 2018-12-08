@@ -3,10 +3,6 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-
-    &:not(:last-child) {
-        margin-bottom: spacing(1);
-    }
 }
 
 .figure__media__image {
@@ -19,7 +15,12 @@
 .figure__caption {
     @include typography(body);
 
+    margin-top: spacing(1);
     font-style: italic;
+}
+
+.figure--scene {
+    padding-top: spacing(1);
 }
 
 .figure--scene .figure__media {
