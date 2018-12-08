@@ -3,8 +3,33 @@ html {
 }
 
 body {
-    @include typography(body);
-
     color: map-get($colors-grays, black);
     background-color: map-get($colors-grays, white);
+}
+
+p,
+ul,
+ol,
+dl {
+    @include typography(body);
+}
+
+ul li,
+ol li,
+dd {
+    &:not(:last-child) {
+        margin-bottom: $typography-line-height-base;
+    }
+}
+
+ul p,
+ol p,
+dl p {
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }

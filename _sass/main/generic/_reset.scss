@@ -15,7 +15,7 @@ h4,
 h5,
 h6 {
     margin-top: 0;
-    margin-bottom: $typography-line-height-base;
+    margin-bottom: 0;
     font-weight: inherit;
     font-size: 1rem;
     line-height: inherit;
@@ -26,5 +26,5 @@ ul,
 ol,
 dl {
     margin-top: 0;
-    margin-bottom: $typography-line-height-base;
+    margin-bottom: 0;
 }

@@ -29,7 +29,8 @@ $typography-scale: (
 $typography-styles: (
     master-headline: (
         default: (
-            margin-bottom: 2 * $typography-line-height-base,
+            padding-top: 0.7rem,
+            margin-bottom: 2 * $typography-line-height-base - 0.7rem,
             font-weight: map-get($typography-font-weight-values, black),
             font-size: map-get($typography-scale, 6),
             line-height: 2 * $typography-line-height-base,
@@ -39,12 +40,14 @@ $typography-styles: (
         ),
         breakpoints: (
             sm: (
-                margin-bottom: 3 * $typography-line-height-base,
+                padding-top: 1rem,
+                margin-bottom: 3 * $typography-line-height-base - 1rem,
                 font-size: map-get($typography-scale, 8),
                 line-height: 3 * $typography-line-height-base,
             ),
             md: (
-                margin-bottom: 4 * $typography-line-height-base,
+                padding-top: 1.35rem,
+                margin-bottom: 4 * $typography-line-height-base - 1.35rem,
                 font-size: map-get($typography-scale, 9),
                 line-height: 4 * $typography-line-height-base,
             ),
@@ -52,6 +55,9 @@ $typography-styles: (
     ),
     master-subheadline: (
         default: (
+            display: block,
+            padding-top: 0.55rem,
+            margin-bottom: -0.55rem,
             font-weight: map-get($typography-font-weight-values, thin),
             font-size: map-get($typography-scale, 2),
             line-height: 2 * $typography-line-height-base,
@@ -61,18 +67,22 @@ $typography-styles: (
         ),
         breakpoints: (
             sm: (
+                padding-top: 0.55rem,
+                margin-bottom: -0.55rem,
                 font-size: map-get($typography-scale, 6),
-                line-height: 2 * $typography-line-height-base,
+                line-height: 3 * $typography-line-height-base,
             ),
             md: (
+                padding-top: 0,
+                margin-bottom: 0,
                 font-size: map-get($typography-scale, 7),
-                line-height: 3 * $typography-line-height-base,
             ),
         ),
     ),
     headline: (
         default: (
-            margin-bottom: 2 * $typography-line-height-base,
+            padding-top: 0.2rem,
+            margin-bottom: 2 * $typography-line-height-base - 0.2rem,
             font-weight: map-get($typography-font-weight-values, black),
             font-size: map-get($typography-scale, 4),
             line-height: $typography-line-height-base,
@@ -82,16 +92,23 @@ $typography-styles: (
         ),
         breakpoints: (
             sm: (
+                padding-top: 0.7rem,
+                margin-bottom: 3 * $typography-line-height-base - 0.7rem,
                 font-size: map-get($typography-scale, 6),
                 line-height: 2 * $typography-line-height-base,
             ),
             md: (
+                padding-top: 0.5rem,
+                margin-bottom: 4 * $typography-line-height-base - 0.5rem,
                 font-size: map-get($typography-scale, 7),
             ),
         ),
     ),
     subheadline: (
         default: (
+            display: block,
+            padding-top: 0.25rem,
+            margin-bottom: -0.25rem,
             font-weight: map-get($typography-font-weight-values, regular),
             font-size: map-get($typography-scale, 1),
             line-height: $typography-line-height-base,
@@ -101,17 +118,22 @@ $typography-styles: (
         ),
         breakpoints: (
             sm: (
+                padding-top: 0.55rem,
+                margin-bottom: -0.55rem,
                 font-size: map-get($typography-scale, 2),
+                line-height: 2 * $typography-line-height-base,
             ),
             md: (
+                padding-top: 0.7rem,
+                margin-bottom: -0.7rem,
                 font-size: map-get($typography-scale, 3),
-                line-height: 2 * $typography-line-height-base,
             ),
         ),
     ),
     title: (
         default: (
-            margin-bottom: 4 * $typography-line-height-base,
+            padding-top: 0.45rem,
+            margin-bottom: 4 * $typography-line-height-base - 0.45rem,
             font-weight: map-get($typography-font-weight-values, black),
             font-size: map-get($typography-scale, 1),
             line-height: $typography-line-height-base,
@@ -122,6 +144,8 @@ $typography-styles: (
         ),
         breakpoints: (
             md: (
+                padding-top: 0.25rem,
+                margin-bottom: 4 * $typography-line-height-base - 0.25rem,
                 font-size: map-get($typography-scale, 3),
                 line-height: $typography-line-height-base,
             ),
@@ -129,6 +153,8 @@ $typography-styles: (
     ),
     body: (
         default: (
+            padding-top: 0.5rem,
+            margin-bottom: $typography-line-height-base - 0.5rem,
             font-weight: map-get($typography-font-weight-values, regular),
             font-size: map-get($typography-scale, 0),
             line-height: $typography-line-height-base,
