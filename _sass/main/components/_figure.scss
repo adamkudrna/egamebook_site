@@ -20,7 +20,7 @@
 }
 
 .figure--scene {
-    padding-top: spacing(1);
+    padding-top: spacing(2);
 }
 
 .figure--scene .figure__media {
@@ -47,11 +47,23 @@
     }
 }
 
+.figure--portrait {
+    padding-top: spacing(1);
+}
+
 .figure--portrait .figure__media {
     height: spacing(16);
 
     @include breakpoint-up(lg) {
         height: spacing(19);
+    }
+}
+
+.figure--portrait .figure__media__image {
+    transform: translateX(2rem);
+
+    @include breakpoint-up(lg) {
+        transform: none;
     }
 }
 

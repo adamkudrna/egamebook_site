@@ -43,13 +43,13 @@ $typography-styles: (
             text-transform: uppercase,
         ),
         breakpoints: (
-            sm: (
+            md: (
                 padding-top: 1rem,
                 margin-bottom: spacing(3) - 1rem,
                 font-size: map-get($typography-scale, 8),
                 line-height: spacing(3),
             ),
-            md: (
+            lg: (
                 padding-top: 1.35rem,
                 margin-bottom: spacing(4) - 1.35rem,
                 font-size: map-get($typography-scale, 9),
@@ -70,13 +70,13 @@ $typography-styles: (
             text-transform: uppercase,
         ),
         breakpoints: (
-            sm: (
+            md: (
                 padding-top: 0.55rem,
                 margin-bottom: -0.55rem,
                 font-size: map-get($typography-scale, 6),
                 line-height: spacing(3),
             ),
-            md: (
+            lg: (
                 padding-top: 0,
                 margin-bottom: 0,
                 font-size: map-get($typography-scale, 7),
@@ -95,13 +95,13 @@ $typography-styles: (
             text-transform: uppercase,
         ),
         breakpoints: (
-            sm: (
+            md: (
                 padding-top: 0.7rem,
                 margin-bottom: spacing(3) - 0.7rem,
                 font-size: map-get($typography-scale, 6),
                 line-height: spacing(2),
             ),
-            md: (
+            lg: (
                 padding-top: 0.5rem,
                 margin-bottom: spacing(4) - 0.5rem,
                 font-size: map-get($typography-scale, 7),
@@ -121,13 +121,13 @@ $typography-styles: (
             text-transform: none,
         ),
         breakpoints: (
-            sm: (
+            md: (
                 padding-top: 0.55rem,
                 margin-bottom: -0.55rem,
                 font-size: map-get($typography-scale, 2),
                 line-height: spacing(2),
             ),
-            md: (
+            lg: (
                 padding-top: 0.7rem,
                 margin-bottom: -0.7rem,
                 font-size: map-get($typography-scale, 3),
@@ -147,7 +147,7 @@ $typography-styles: (
             text-align: right,
         ),
         breakpoints: (
-            md: (
+            lg: (
                 padding-top: 0.25rem,
                 margin-bottom: spacing(4) - 0.25rem,
                 font-size: map-get($typography-scale, 3),
