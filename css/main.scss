@@ -5,10 +5,12 @@
 @import "main/settings/breakpoints";
 @import "main/settings/colors";
 @import "main/settings/fonts";
+@import "main/settings/grid";
 @import "main/settings/typography";
 
 // Tools
 @import "main/tools/breakpoints";
+@import "main/tools/grid";
 @import "main/tools/spacing";
 @import "main/tools/typography";
 
@@ -21,6 +23,7 @@
 
 // Objects
 @import "main/objects/container";
+@import "main/objects/grid";
 @import "main/objects/main";
 @import "main/objects/section";
 

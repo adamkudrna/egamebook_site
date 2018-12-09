@@ -12,6 +12,14 @@
 
 .typography-subheadline {
     @include typography(subheadline);
+
+    @include breakpoint-up(lg) {
+        padding-left: grid-column-spacing(1, 12);
+    }
+
+    @include breakpoint-up(xl) {
+        padding-left: grid-column-spacing(2, 12);
+    }
 }
 
 .typography-title {

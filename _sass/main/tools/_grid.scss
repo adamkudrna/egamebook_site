@@ -1,0 +1,13 @@
+@function grid-column-spacing($offset, $context) {
+    @if ($offset % 1 != 0) {
+        @error "Grid spacing can only be adjusted by whole columns, #{$offset} given.";
+    }
+
+    @else if ($context % 1 != 0 or $context <= 0) {
+        @error "Grid columns context is expected to be a whole positive number, #{$context} given.";
+    }
+
+    @else {
+        @return calc(#{$offset} * (#{spacing(1)} + (100% - #{$context - 1} * #{spacing(1)}) / #{$context}));
+    }
+}

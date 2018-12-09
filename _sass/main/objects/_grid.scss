@@ -1,0 +1,40 @@
+.grid {
+    @include breakpoint-up($grid-start-breakpoint) {
+        display: grid;
+        grid-template-columns: repeat($grid-columns, 1fr);
+        grid-column-gap: $grid-gap;
+    }
+}
+
+.grid__text-left {
+    @include breakpoint-up($grid-start-breakpoint) {
+        grid-column: 2 / span 6;
+    }
+
+    @include breakpoint-up(xl) {
+        grid-column: 3 / span 5;
+    }
+}
+
+.grid__text-right {
+    @include breakpoint-up($grid-start-breakpoint) {
+        grid-column: 8 / span 5;
+    }
+
+    @include breakpoint-up(xl) {
+        grid-column: 8 / span 4;
+    }
+}
+
+.grid__figure-left {
+    @include breakpoint-up($grid-start-breakpoint) {
+        grid-column: span 6;
+        order: -1;
+    }
+}
+
+.grid__figure-right {
+    @include breakpoint-up($grid-start-breakpoint) {
+        grid-column: 9 / span 4;
+    }
+}
