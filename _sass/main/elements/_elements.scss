@@ -13,8 +13,31 @@ ol,
 dl {
     @include typography(body);
 
+    max-width: 50ch;
+
     &:last-child {
         margin-bottom: -$typography-body-baseline-compensation;
+    }
+}
+
+ol,
+ul {
+    padding-left: $typography-list-padding-left;
+}
+
+ol {
+    list-style: none;
+    counter-reset: list-counter;
+}
+
+ol li {
+    counter-increment: list-counter;
+
+    &::before {
+        content: counter(list-counter) '. ';
+        float: left;
+        margin-left: -$typography-list-padding-left;
+        font-style: italic;
     }
 }
 

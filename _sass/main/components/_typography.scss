@@ -25,3 +25,9 @@
 .typography-title {
     @include typography(title);
 }
+
+.typography-hanging-list {
+    @include breakpoint-up($grid-start-breakpoint) {
+        margin-left: -$typography-list-padding-left;
+    }
+}
