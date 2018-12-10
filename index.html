@@ -4,17 +4,45 @@ title: Egamebook
 description: "Egamebook is a project which strives to bring the gamebook (aka Choose-Your-Own-Adventure) experience to the ‘new media’ platforms (mobile, tablet, web, …) and to the 21st century."
 ---
 
-<header>
+<header class="header">
     <div class="container">
 
         <h1 class="typography-title">{{ site.name }}</h1>
 
-        <h2 class="typography-master-headline">
-            A Dungeon Master<br />
-            <span class="typography-master-subheadline">in Your Pocket</span>
-        </h2>
+        <div class="grid">
+            <div class="grid__item grid__item--header-headline">
 
-        <p>Imagine reading a&nbsp;book where you can do much more than just choose a&nbsp;path. Imagine a&nbsp;book where your actions have realistic and meaningful impact on the fictional, simulated world.</p>
+                <h2 class="typography-master-headline">
+                    A Dungeon<br />
+                    Master<br />
+                    <span class="typography-master-subheadline">in Your Pocket</span>
+                </h2>
+
+            </div>
+            <div class="grid__item grid__item--header-perex">
+
+                <p class="typography-perex">
+                    Imagine reading a&nbsp;book where you can do much more than just choose a&nbsp;path. Imagine a&nbsp;book where your actions have realistic and meaningful impact on the fictional, simulated world.
+                </p>
+
+            </div>
+            <div class="grid__item grid__item--header-phone">
+
+                <div class="phone">
+                    <div class="phone__canvas">
+                        <div class="phone__image">
+                            <div class="phone__frame">
+                                <div class="phone__frame__screen-area">
+                                    <img src="/img/screen@2x.jpg" class="phone__screen" alt="Egamebook" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone__note">Prototype</div>
+                </div>
+
+            </div>
+        </div>
 
     </div>
 </header>
@@ -28,7 +56,7 @@ description: "Egamebook is a project which strives to bring the gamebook (aka Ch
             </h2>
 
             <div class="grid">
-                <div class="grid__text-right">
+                <div class="grid__item grid__item--text-right">
 
                     <ol class="typography-hanging-list">
                         <li>
@@ -43,7 +71,7 @@ description: "Egamebook is a project which strives to bring the gamebook (aka Ch
                     </ol>
 
                 </div>
-                <div class="grid__figure-left">
+                <div class="grid__item grid__item--figure-left">
 
                     <div class="container__expand">
                         <figure class="figure figure--scene">
@@ -59,8 +87,8 @@ description: "Egamebook is a project which strives to bring the gamebook (aka Ch
 
                 </div>
             </div>
-        </div>
 
+        </div>
     </section>
     <section class="section">
         <div class="container">
@@ -71,7 +99,7 @@ description: "Egamebook is a project which strives to bring the gamebook (aka Ch
             </h2>
 
             <div class="grid">
-                <div class="grid__text-left">
+                <div class="grid__item grid__item--text-left">
 
                     <p>Existing electronic gamebook systems work with either scripting languages (like JavaScript) or—more often—with something even simpler (something that only allows variables and conditional statements and not much else). In contrast, egamebook (this project) is build on Dart, which is a&nbsp;mature, structured programming environment. Authors can do as little as simple arithmetic assignments, or as much as running physics simulations or complex ecologies.</p>
                     <p>There is no limit to what the authors can implement. They have all the tooling and structure that they need for implementing complex mechanics like the ones above. Actually, in this respect, the tooling is better than for many AAA games.</p>
@@ -80,7 +108,7 @@ description: "Egamebook is a project which strives to bring the gamebook (aka Ch
                     <p>Let’s say you need to keep track of each city in a&nbsp;game world—their population, economic characteristics, diplomacy status, and much more. In a&nbsp;language like Dart, the complexity is manageable: you create a&nbsp;City class and its logic, you test it, and when it’s ready, you then use it in your egamebook.</p>
 
                 </div>
-                <div class="grid__figure-right">
+                <div class="grid__item grid__item--figure-right">
 
                     <div class="container__expand">
                         <figure class="figure figure--portrait">
@@ -97,6 +125,7 @@ description: "Egamebook is a project which strives to bring the gamebook (aka Ch
 
                 </div>
             </div>
+
         </div>
     </section>
 </main>

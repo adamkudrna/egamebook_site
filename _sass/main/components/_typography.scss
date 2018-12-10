@@ -27,7 +27,26 @@
 }
 
 .typography-hanging-list {
-    @include breakpoint-up($grid-start-breakpoint) {
+    @include breakpoint-up(lg) {
         margin-left: -$typography-list-padding-left;
+    }
+}
+
+.typography-perex {
+    max-width: 32ch;
+
+    &:first-line {
+        font-size: map-get($typography-scale, 1);
+        font-style: italic;
+    }
+
+    @include breakpoint-up(md) {
+        padding-top: $typography-body-baseline-compensation - 0.25rem;
+        margin-bottom: $typography-body-baseline-compensation - 0.25rem;
+
+        &:first-line {
+            font-size: map-get($typography-scale, 2);
+            line-height: spacing(1) + 0.25rem;
+        }
     }
 }

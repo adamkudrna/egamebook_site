@@ -1,13 +1,80 @@
 .grid {
-    @include breakpoint-up($grid-start-breakpoint) {
+    @include breakpoint-up(md) {
         display: grid;
         grid-template-columns: repeat($grid-columns, 1fr);
         grid-column-gap: $grid-gap;
     }
 }
 
-.grid__text-left {
-    @include breakpoint-up($grid-start-breakpoint) {
+.grid__item {
+    @include breakpoint-up(md) {
+        grid-column: span $grid-columns;
+    }
+}
+
+.grid__item--header-headline {
+    @include breakpoint-up(lg) {
+        grid-column: 1 / span 6;
+        order: 1;
+        padding-top: spacing(2);
+    }
+}
+
+.grid__item--header-perex {
+    @include breakpoint-up(md) {
+        grid-column: 1 / span 5;
+        padding-top: spacing(4);
+    }
+
+    @include breakpoint-up(lg) {
+        grid-column: 1 / span 5;
+        order: 3;
+        padding-top: 0;
+    }
+
+    @include breakpoint-up(xl) {
+        grid-column: 1 / span 4;
+    }
+}
+
+.grid__item--header-phone {
+    position: relative;
+    height: spacing(19);
+    padding-top: spacing(2);
+
+    @media (min-width: 21em) {
+        height: spacing(20);
+    }
+
+    @media (min-width: 22em) {
+        height: spacing(21);
+    }
+
+    @media (min-width: 23em) {
+        height: spacing(23);
+    }
+
+    @include breakpoint-up(sm) {
+        height: spacing(24);
+        padding-top: spacing(3);
+    }
+
+    @include breakpoint-up(md) {
+        grid-column: 7 / span 6;
+        padding-top: spacing(1);
+    }
+
+    @include breakpoint-up(lg) {
+        grid-column: 8 / span 4;
+        grid-row: span 2;
+        order: 2;
+        height: spacing(22);
+        padding-top: 0;
+    }
+}
+
+.grid__item--text-left {
+    @include breakpoint-up(lg) {
         grid-column: 2 / span 6;
     }
 
@@ -16,8 +83,8 @@
     }
 }
 
-.grid__text-right {
-    @include breakpoint-up($grid-start-breakpoint) {
+.grid__item--text-right {
+    @include breakpoint-up(lg) {
         grid-column: 8 / span 5;
     }
 
@@ -26,15 +93,15 @@
     }
 }
 
-.grid__figure-left {
-    @include breakpoint-up($grid-start-breakpoint) {
+.grid__item--figure-left {
+    @include breakpoint-up(lg) {
         grid-column: span 6;
         order: -1;
     }
 }
 
-.grid__figure-right {
-    @include breakpoint-up($grid-start-breakpoint) {
+.grid__item--figure-right {
+    @include breakpoint-up(lg) {
         grid-column: 9 / span 4;
     }
 }

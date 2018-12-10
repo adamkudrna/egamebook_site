@@ -16,7 +16,7 @@
     font-style: italic;
     text-align: center;
 
-    @include breakpoint-up($grid-start-breakpoint) {
+    @include breakpoint-up(lg) {
         text-align: left;
     }
 }
@@ -28,7 +28,7 @@
         padding-top: spacing(3);
     }
 
-    @include breakpoint-up($grid-start-breakpoint) {
+    @include breakpoint-up(lg) {
         padding-top: 0;
     }
 }
@@ -69,7 +69,7 @@
         padding-top: spacing(2);
     }
 
-    @include breakpoint-up($grid-start-breakpoint) {
+    @include breakpoint-up(lg) {
         padding-top: 0;
     }
 }

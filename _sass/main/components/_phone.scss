@@ -1,0 +1,102 @@
+// Responsive phone mock-up with interchangeable screen content.
+//
+// 1. Phone screen content is sized responsively according to screen area dimensions.
+// 2. Screen area is sized relatively to phone frame with shadow.
+// 3. Phone frame image, including outer shadows, sits on top of screen area.
+// 4. Resulting composition is sized and placed inside phone canvas. Edges of the phone are aligned
+//    to the canvas edges so the whole mock-up can be sized and placed with focus on the area of
+//    actual device. Outer shadows (actual overflowing image) are not taken into account and they
+//    behave like a real box shadow.
+// 5. To be truly responsive without having to specify any exact dimensions, the `padding-top` trick
+//    is used to keep aspect ratio of the mock-up.
+// 6. On small screens, dimensions of the mock-up are limited. The mock-up is scaled a bit to exceed
+//    the container and the it is centered horizontally on the page.
+
+.phone {
+    position: relative; // 5.
+    max-width: 20rem; // 6.
+    margin-right: auto; // 6.
+    margin-left: auto; // 6.
+    transform: scale(1.05, 1.05); // 6.
+    transform-origin: center top; // 6.
+
+    &::after {
+        content: ''; // 5.
+        display: block; // 5.
+        padding-top: 694px / 320px * 100%; // 5.
+    }
+
+    @include breakpoint-up(md) {
+        max-width: 22rem;
+        transform: none;
+    }
+
+    @include breakpoint-up(lg) {
+        max-width: none;
+    }
+}
+
+.phone__canvas {
+    position: absolute; // 5.
+    top: 0; // 5.
+    right: 0; // 5.
+    bottom: 0; // 5.
+    left: 0; // 5.
+}
+
+.phone__image {
+    position: relative; // 4.
+    top: -2.5%; // 4.
+    left: -30.5%; // 4.
+    width: 135%; // 4.
+    height: 115.275%; // 4.
+}
+
+.phone__frame {
+    position: relative;
+    height: 100%;
+
+    &::before {
+        content: '';
+        position: relative;
+        z-index: 1; // 3.
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(../img/phone@2x.png) no-repeat center top; // 3.
+        background-size: 100%;
+    }
+}
+
+.phone__frame__screen-area {
+    position: absolute; // 2.
+    top: 6.4%; // 2.
+    left: 24%; // 2.
+    z-index: 0; // 3.
+    width: 71%; // 2.
+}
+
+.phone__screen {
+    display: block;
+    width: 100%; // 1.
+    height: auto; // 1.
+}
+
+.phone__note {
+    @include typography(note);
+
+    position: absolute;
+    left: 98%;
+    bottom: 15%;
+    color: map-get($colors-grays, gray);
+    transform: rotateZ(-90deg);
+    transform-origin: left top;
+
+    @include breakpoint-up(md) {
+        left: 100%;
+    }
+
+    @include breakpoint-up(lg) {
+        left: calc(100% + #{spacing(1)} - 0.4rem);
+    }
+}
