@@ -1,5 +1,17 @@
 html {
     font-size: $typography-font-size-base;
+
+    @include breakpoint-up(x2l) {
+        font-size: $typography-font-size-base-x2l;
+    }
+
+    @include breakpoint-up(x3l) {
+        font-size: $typography-font-size-base-x3l;
+    }
+
+    @include breakpoint-up(x4l) {
+        font-size: $typography-font-size-base-x4l;
+    }
 }
 
 body {

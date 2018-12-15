@@ -12,7 +12,10 @@ $typography-font-weight-values: (
     black: 900,
 );
 
-$typography-font-size-base: 100%;
+$typography-font-size-base: 100%; // 16 px
+$typography-font-size-base-x2l: 106.26%; // 17 px
+$typography-font-size-base-x3l: 112.5%; // 18 px
+$typography-font-size-base-x4l: 118.75%; // 19 px
 $typography-line-height-base: 1.75rem;
 
 $typography-scale: (
