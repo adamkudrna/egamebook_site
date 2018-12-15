@@ -6,20 +6,16 @@
     @include typography(master-subheadline);
 }
 
-.typography-headline {
-    @include typography(headline);
+.typography-headline1 {
+    @include typography(headline1);
 }
 
-.typography-subheadline {
-    @include typography(subheadline);
+.typography-subheadline1 {
+    @include typography(subheadline1);
+}
 
-    @include breakpoint-up(lg) {
-        padding-left: grid-column-spacing(1, 12);
-    }
-
-    @include breakpoint-up(xl) {
-        padding-left: grid-column-spacing(2, 12);
-    }
+.typography-headline3 {
+    @include typography(headline3);
 }
 
 .typography-title {
@@ -36,7 +32,7 @@
     max-width: 32ch;
 
     &:first-line {
-        font-size: map-get($typography-scale, 1);
+        font-size: map-get($typography-scale, 2);
         font-style: italic;
     }
 
@@ -45,8 +41,14 @@
         margin-bottom: $typography-body-baseline-compensation - 0.25rem;
 
         &:first-line {
-            font-size: map-get($typography-scale, 2);
+            font-size: map-get($typography-scale, 3);
             line-height: spacing(1) + 0.25rem;
         }
     }
+}
+
+.typography-note {
+    @include typography(body);
+
+    font-style: italic;
 }

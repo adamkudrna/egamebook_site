@@ -60,3 +60,16 @@ dl p {
         margin-bottom: 0;
     }
 }
+
+hr {
+    margin-top: spacing(2);
+    margin-bottom: calc(#{spacing(2)} - #{$border-width});
+    border: 0;
+    border-top: $border-width solid currentColor;
+    background: none;
+
+    @include breakpoint-up(md) {
+        margin-top: spacing(3);
+        margin-bottom: calc(#{spacing(3)} - #{$border-width});
+    }
+}

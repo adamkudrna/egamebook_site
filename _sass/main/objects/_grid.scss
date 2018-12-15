@@ -105,3 +105,27 @@
         grid-column: 9 / span 4;
     }
 }
+
+.grid__item--footer-cta {
+    @include breakpoint-up(lg) {
+        grid-column: 2 / span 9;
+    }
+
+    @include breakpoint-up(xl) {
+        grid-column: 1 / span 6;
+    }
+}
+
+.grid__item--footer-note {
+    @include breakpoint-up(md) {
+        grid-column: 1 / span 8;
+    }
+
+    @include breakpoint-up(lg) {
+        grid-column: 2 / span 5;
+    }
+
+    @include breakpoint-up(xl) {
+        grid-column: 9 / span 4;
+    }
+}

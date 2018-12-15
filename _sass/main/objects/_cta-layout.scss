@@ -1,0 +1,38 @@
+.cta-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: spacing(2) 1rem;
+    margin-bottom: spacing(2);
+
+    @include breakpoint-up(md) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0 $grid-gap;
+        margin-bottom: spacing(3);
+    }
+}
+
+.cta-layout__item {
+    max-width: spacing(7);
+
+    &:first-child {
+        grid-column: span 2;
+        justify-self: center;
+    }
+
+    &:nth-child(2) {
+        justify-self: right;
+    }
+
+    &:nth-child(3) {
+        justify-self: left;
+    }
+
+    @include breakpoint-up(md) {
+        max-width: none;
+        width: 100%;
+
+        &:first-child {
+            grid-column: span 1;
+        }
+    }
+}

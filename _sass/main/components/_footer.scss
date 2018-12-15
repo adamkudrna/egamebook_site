@@ -1,0 +1,21 @@
+.footer {
+    padding-top: spacing(3);
+    padding-bottom: spacing(3);
+    color: map-get($colors-grays, white);
+    background-color: map-get($colors-grays, gray-darker);
+
+    @include breakpoint-up(sm) {
+        padding-top: spacing(4);
+        padding-bottom: spacing(4);
+    }
+
+    @include breakpoint-up(md) {
+        padding-top: spacing(5);
+        padding-bottom: spacing(5);
+    }
+
+    @include breakpoint-up(lg) {
+        padding-top: spacing(6);
+        padding-bottom: spacing(6);
+    }
+}

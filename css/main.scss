@@ -2,6 +2,7 @@
 ---
 
 // Settings
+@import "main/settings/borders";
 @import "main/settings/breakpoints";
 @import "main/settings/colors";
 @import "main/settings/fonts";
@@ -23,12 +24,16 @@
 
 // Objects
 @import "main/objects/container";
+@import "main/objects/cta-layout";
 @import "main/objects/grid";
 @import "main/objects/main";
 @import "main/objects/section";
 
 // Components
 @import "main/components/figure";
+@import "main/components/footer";
 @import "main/components/header";
+@import "main/components/icon-box";
 @import "main/components/phone";
+@import "main/components/tooltip";
 @import "main/components/typography";

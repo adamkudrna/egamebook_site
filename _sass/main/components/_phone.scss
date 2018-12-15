@@ -82,21 +82,23 @@
     height: auto; // 1.
 }
 
-.phone__note {
-    @include typography(note);
+.phone__caption {
+    @include typography(mockup-caption);
 
     position: absolute;
-    left: 98%;
-    bottom: 15%;
+    left: 100%;
+    bottom: 17%;
+    padding-top: 0.1875rem;
     color: map-get($colors-grays, gray);
     transform: rotateZ(-90deg);
     transform-origin: left top;
 
     @include breakpoint-up(md) {
-        left: 100%;
+        left: 102.5%;
+        padding-top: 0;
     }
 
     @include breakpoint-up(lg) {
-        left: calc(100% + #{spacing(1)} - 0.4rem);
+        left: calc(100% + #{spacing(1)});
     }
 }
