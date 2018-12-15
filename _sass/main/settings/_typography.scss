@@ -142,6 +142,17 @@ $typography-styles: (
             ),
         ),
     ),
+    headline2: (
+        default: (
+            padding-top: 0.3rem,
+            margin-bottom: spacing(1) - 0.3rem,
+            font-weight: map-get($typography-font-weight-values, regular),
+            font-size: map-get($typography-scale, 4),
+            line-height: spacing(1),
+            font-family: $typography-font-family-serif,
+            font-style: italic,
+        ),
+    ),
     headline3: (
         default: (
             padding-top: $typography-body-baseline-compensation,
@@ -200,6 +211,15 @@ $typography-styles: (
             font-family: $typography-font-family-sans-serif,
             letter-spacing: 0.075em,
             text-transform: uppercase,
+        ),
+    ),
+    input: (
+        default: (
+            font-weight: map-get($typography-font-weight-values, light),
+            font-size: map-get($typography-scale, 0),
+            line-height: spacing(1),
+            font-family: $typography-font-family-sans-serif,
+            letter-spacing: 0.175em,
         ),
     ),
     tooltip: (

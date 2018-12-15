@@ -1,4 +1,6 @@
 .icon-box {
+    @include transition(box-shadow);
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,6 +11,12 @@
     color: inherit;
     border: $border-width solid currentColor;
     border-radius: $border-radius;
+
+    &:focus,
+    &:active {
+        outline: 0;
+        box-shadow: $shadow-highlight;
+    }
 }
 
 .icon-box__icon {

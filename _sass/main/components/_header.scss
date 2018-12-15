@@ -2,7 +2,7 @@
     padding-top: spacing(1);
     padding-bottom: spacing(3);
     color: map-get($colors-grays, white);
-    background-color: map-get($colors-grays, gray-darker);
+    background-color: map-get($colors-grays, gray-darkest);
 
     @include breakpoint-up(lg) {
         padding-top: spacing(2);

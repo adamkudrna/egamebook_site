@@ -19,7 +19,7 @@
         border-width: $border-width;
         border-style: solid solid none none;
         border-color: currentColor;
-        background-color: map-get($colors-grays, gray-darker);
+        background-color: map-get($colors-grays, gray-darkest);
         transform: translate(-50%, calc(0.5rem - #{$border-width})) rotateZ(-45deg) skewX(-5deg) skewY(-5deg);
     }
 }

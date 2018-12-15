@@ -1,0 +1,24 @@
+.button {
+    @include typography(button);
+    @include transition('background-color, box-shadow');
+
+    width: 100%;
+    margin: 0;
+    padding: (calc(#{spacing(1) / 2} - #{$border-width})) spacing(1);
+    text-align: center;
+    color: map-get($colors-grays, white);
+    border: $border-width solid map-get($colors-grays, white);
+    border-radius: $border-radius;
+    background-color: map-get($colors-grays, gray-darkest);
+    background-image: none;
+
+    &:hover,
+    &:focus {
+        outline: 0;
+        background-color: map-get($colors-grays, gray-darker);
+    }
+
+    &:active {
+        box-shadow: $shadow-highlight;
+    }
+}

@@ -1,8 +1,6 @@
 .grid {
     @include breakpoint-up(md) {
-        display: grid;
-        grid-template-columns: repeat($grid-columns, 1fr);
-        grid-column-gap: $grid-gap;
+        @include grid-template();
     }
 }
 

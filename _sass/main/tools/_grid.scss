@@ -11,3 +11,9 @@
         @return calc(#{$offset} * (#{spacing(1)} + (100% - #{$context - 1} * #{spacing(1)}) / #{$context}));
     }
 }
+
+@mixin grid-template() {
+    display: grid;
+    grid-template-columns: repeat($grid-columns, 1fr);
+    grid-column-gap: $grid-gap;
+}
