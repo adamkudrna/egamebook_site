@@ -30,3 +30,16 @@
         padding-left: 0;
     }
 }
+
+.footer__bottom {
+    @include typography(small);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: spacing(-1);
+
+    @include breakpoint-up(md) {
+        margin-top: spacing(-2);
+    }
+}

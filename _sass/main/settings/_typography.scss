@@ -197,8 +197,12 @@ $typography-styles: (
     ),
     small: (
         default: (
+            padding-top: 0.5rem,
+            margin-bottom: -0.5rem,
+            font-weight: map-get($typography-font-weight-values, regular),
             font-size: map-get($typography-scale, -1),
             line-height: spacing(1),
+            font-family: $typography-font-family-serif,
         ),
     ),
     button: (

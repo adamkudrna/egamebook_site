@@ -56,3 +56,26 @@
 
     font-style: italic;
 }
+
+.typography-link {
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    color: inherit;
+
+    &::after {
+        @include transition(border-color);
+
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: 0.25rem;
+        border-bottom: 1px solid map-get($colors-grays, gray);
+    }
+
+    &:hover::after,
+    &:focus::after {
+        border-bottom-color: currentColor;
+    }
+}
