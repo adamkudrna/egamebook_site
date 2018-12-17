@@ -4,6 +4,7 @@
 // Settings
 @import "main/settings/borders";
 @import "main/settings/breakpoints";
+@import "main/settings/collapsible";
 @import "main/settings/colors";
 @import "main/settings/fonts";
 @import "main/settings/grid";
@@ -34,6 +35,7 @@
 
 // Components
 @import "main/components/button";
+@import "main/components/collapsible";
 @import "main/components/figure";
 @import "main/components/footer";
 @import "main/components/header";

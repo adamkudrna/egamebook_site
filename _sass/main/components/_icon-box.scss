@@ -12,8 +12,8 @@
     border: $border-width solid currentColor;
     border-radius: $border-radius;
 
-    &:focus,
-    &:active {
+    &:link:focus,
+    &:link:active {
         outline: 0;
         box-shadow: $shadow-highlight;
     }

@@ -1,0 +1,39 @@
+.collapsible-input {
+    display: none;
+}
+
+.collapsible-label {
+    display: inline-block;
+    user-select: none;
+
+    @include breakpoint-up($collapsible-max-breakpoint) {
+        display: none;
+    }
+}
+
+.collapsible-content {
+    @include transition(opacity, 750ms);
+}
+
+.collapsible-input:not(:checked) ~ .collapsible-content {
+    visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+    margin-bottom: $typography-body-baseline-compensation;
+
+    @include breakpoint-up($collapsible-max-breakpoint) {
+        visibility: visible;
+        max-height: none;
+        opacity: 1;
+        margin-bottom: 0;
+    }
+}
+
+.collapsible-input:checked + .collapsible-label .collapsible-label__text {
+    display: none;
+}
+
+.collapsible-input:checked + .collapsible-label::before {
+    content: attr(data-uncollapsed-text);
+    display: inline;
+}
