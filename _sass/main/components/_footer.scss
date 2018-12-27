@@ -24,8 +24,8 @@
     @include typography(small);
 
     display: flex;
-    justify-content: space-between;
     align-items: baseline;
+    justify-content: space-between;
     margin-top: spacing(-1);
 
     @include breakpoint-up(md) {

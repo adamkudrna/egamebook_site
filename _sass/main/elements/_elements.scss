@@ -26,10 +26,6 @@ dl {
     @include typography(body);
 
     max-width: 50ch;
-
-    &:last-child {
-        margin-bottom: -$typography-body-baseline-compensation;
-    }
 }
 
 ol,
@@ -53,6 +49,16 @@ ol li {
     }
 }
 
+// stylelint-disable no-descending-specificity, no-duplicate-selectors
+p,
+ul,
+ol,
+dl {
+    &:last-child {
+        margin-bottom: -$typography-body-baseline-compensation;
+    }
+}
+
 ul li,
 ol li,
 dd {
@@ -72,6 +78,7 @@ dl p {
         margin-bottom: 0;
     }
 }
+// stylelint-enable
 
 hr {
     margin-top: spacing(2);

@@ -3,19 +3,19 @@
     @include transition('background-color, box-shadow');
 
     width: 100%;
-    margin: 0;
     padding: (calc(#{spacing(1) / 2} - #{$border-width})) spacing(1);
+    margin: 0;
     text-align: center;
     color: map-get($colors-grays, white);
     border: $border-width solid map-get($colors-grays, white);
     border-radius: $border-radius;
-    background-color: map-get($colors-grays, gray-darkest);
     background-image: none;
+    background-color: map-get($colors-grays, gray-darkest);
 
     &:hover,
     &:focus {
-        outline: 0;
         background-color: map-get($colors-grays, gray-darker);
+        outline: 0;
     }
 
     &:active {

@@ -22,14 +22,14 @@
 @media screen {
     .collapsible-input:not(:checked) ~ .collapsible-content {
         visibility: hidden;
-        max-height: 0;
         opacity: 0;
+        max-height: 0;
         margin-bottom: $typography-body-baseline-compensation;
 
         @include breakpoint-up($collapsible-max-breakpoint) {
             visibility: visible;
-            max-height: none;
             opacity: 1;
+            max-height: none;
             margin-bottom: 0;
         }
     }

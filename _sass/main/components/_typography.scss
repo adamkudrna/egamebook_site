@@ -45,16 +45,16 @@
 .typography-perex {
     max-width: 32ch;
 
-    &:first-line {
-        font-size: map-get($typography-scale, 2);
+    &::first-line {
         font-style: italic;
+        font-size: map-get($typography-scale, 2);
     }
 
     @include breakpoint-up(md) {
         padding-top: $typography-body-baseline-compensation - 0.25rem;
         margin-bottom: $typography-body-baseline-compensation - 0.25rem;
 
-        &:first-line {
+        &::first-line {
             font-size: map-get($typography-scale, 3);
             line-height: spacing(1) + 0.25rem;
         }
@@ -75,10 +75,10 @@
         @include transition(border-color);
 
         content: '';
-        display: block;
-        width: 100%;
         position: absolute;
         bottom: 0.25rem;
+        display: block;
+        width: 100%;
         border-bottom: 1px solid map-get($colors-grays, gray);
     }
 

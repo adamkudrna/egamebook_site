@@ -86,8 +86,8 @@
     @include typography(mockup-caption);
 
     position: absolute;
-    left: 100%;
     bottom: 17%;
+    left: 100%;
     padding-top: 0.1875rem;
     color: map-get($colors-grays, gray);
     transform: rotateZ(-90deg);

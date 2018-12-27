@@ -10,6 +10,7 @@ deploy: .full_build.intermediate
 	firebase deploy
 
 .full_build.intermediate: $(MARKDOWN_TOPLEVEL) $(MARKDOWN_SUBDIRS)
+	npm run lint:css
 	npm run build:css
 	jekyll build
 	touch .full_build.intermediate
