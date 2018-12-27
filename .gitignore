@@ -1,5 +1,7 @@
-_site
 .sass-cache/*
 .jekyll-cache
 .jekyll-metadata
 .full_build.intermediate
+_css
+_site
+node_modules

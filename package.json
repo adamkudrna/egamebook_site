@@ -1,0 +1,21 @@
+{
+  "name": "egamebook_site",
+  "version": "1.0.0",
+  "description": "Egamebook official site",
+  "devDependencies": {
+    "autoprefixer": "^9.4.3",
+    "node-sass": "^4.11.0",
+    "postcss-cli": "^6.1.0"
+  },
+  "scripts": {
+    "build:css": "node-sass --output _css _sass/main/main.scss && postcss _css/main.css --output _css/main.inc.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filiph/egamebook_site.git"
+  },
+  "homepage": "http://egambook.com",
+  "engines": {
+    "node": ">=8.12"
+  }
+}

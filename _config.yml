@@ -6,8 +6,10 @@ plugins:
   - jekyll-assets
 
 assets:
+  compression: true
   sources:
-    - _sass/main
+    - _css
+    - _fonts
 
 markdown: redcarpet
 
@@ -32,5 +34,11 @@ defaults:
 include: [".well-known"]
 
 exclude:
-  - fonts
+  - "*.js"
+  - "*.json"
+  - "*.md"
+  - "*.sh"
+  - .*rc
   - Gemfile*
+  - makefile
+  - node_modules
