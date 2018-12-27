@@ -24,6 +24,16 @@
 
 .typography-title {
     @include typography(title);
+
+    &:only-child {
+        margin-bottom: -0.45rem;
+    }
+
+    @include breakpoint-up(lg) {
+        &:only-child {
+            margin-bottom: -0.25rem;
+        }
+    }
 }
 
 .typography-hanging-list {
@@ -59,9 +69,7 @@
 
 .typography-link {
     position: relative;
-    text-decoration: none;
     white-space: nowrap;
-    color: inherit;
 
     &::after {
         @include transition(border-color);

@@ -20,17 +20,6 @@
     }
 }
 
-.footer__signup-headline,
-.footer__signup-note {
-    @include breakpoint-up(lg) {
-        padding-left: grid-column-spacing(1, 12);
-    }
-
-    @include breakpoint-up(xl) {
-        padding-left: 0;
-    }
-}
-
 .footer__bottom {
     @include typography(small);
 
@@ -42,4 +31,8 @@
     @include breakpoint-up(md) {
         margin-top: spacing(-2);
     }
+}
+
+.footer--minimal {
+    padding-top: spacing(1);
 }

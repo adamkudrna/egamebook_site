@@ -12,3 +12,9 @@
         padding-bottom: spacing(7);
     }
 }
+
+.header--minimal {
+    @include breakpoint-up(xl) {
+        padding-bottom: spacing(3);
+    }
+}

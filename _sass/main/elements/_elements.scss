@@ -15,8 +15,8 @@ html {
 }
 
 body {
-    color: map-get($colors-grays, black);
-    background-color: map-get($colors-grays, white);
+    color: map-get($colors-grays, white);
+    background-color: map-get($colors-grays, gray-darkest);
 }
 
 p,
@@ -84,4 +84,9 @@ hr {
         margin-top: spacing(3);
         margin-bottom: calc(#{spacing(3)} - #{$border-width});
     }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
