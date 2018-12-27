@@ -12,9 +12,18 @@
     }
 }
 
+// IE friendly grid (with rows specified).
+// Grid gap cannot be translated by Autoprefixer when not using grid template areas (like in this case).
+// https://github.com/postcss/autoprefixer#grid-autoplacement-support-in-ie
 @mixin grid-template() {
     display: grid;
+
+    // Handle this prefix manually since jekyll-assets removes braces from IE repeat syntax 🙈.
+    // autoprefixer: off
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat($grid-columns, 1fr);
-    grid-template-rows: auto auto; // unfortunately, we must specify rows for grid to work in IE
+    // autoprefixer: on
+
+    grid-template-rows: auto auto;
     grid-column-gap: $grid-gap;
 }
