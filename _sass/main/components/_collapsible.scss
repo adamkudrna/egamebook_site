@@ -9,23 +9,29 @@
     @include breakpoint-up($collapsible-max-breakpoint) {
         display: none;
     }
+
+    @media print {
+        display: none;
+    }
 }
 
 .collapsible-content {
     @include transition(opacity, 750ms);
 }
 
-.collapsible-input:not(:checked) ~ .collapsible-content {
-    visibility: hidden;
-    max-height: 0;
-    opacity: 0;
-    margin-bottom: $typography-body-baseline-compensation;
+@media screen {
+    .collapsible-input:not(:checked) ~ .collapsible-content {
+        visibility: hidden;
+        max-height: 0;
+        opacity: 0;
+        margin-bottom: $typography-body-baseline-compensation;
 
-    @include breakpoint-up($collapsible-max-breakpoint) {
-        visibility: visible;
-        max-height: none;
-        opacity: 1;
-        margin-bottom: 0;
+        @include breakpoint-up($collapsible-max-breakpoint) {
+            visibility: visible;
+            max-height: none;
+            opacity: 1;
+            margin-bottom: 0;
+        }
     }
 }
 

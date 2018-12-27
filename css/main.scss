@@ -21,6 +21,7 @@
 // Generic
 @import "main/generic/box-sizing";
 @import "main/generic/reset";
+@import "main/generic/print";
 
 // Elements
 @import "main/elements/elements";
@@ -44,3 +45,6 @@
 @import "main/components/textfield";
 @import "main/components/tooltip";
 @import "main/components/typography";
+
+// Utilities
+@import "main/utilities/print";
