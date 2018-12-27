@@ -15,12 +15,13 @@ deploy: .full_build.intermediate
 
 serve:
 	rm -f .full_build.intermediate  # serving builds a local site
+	jekyll build
 	./serve.sh
 
 install:
-	gem install jekyll bundler
-	npm install -g firebase-tools
-	npm install -g superstatic
+	gem install bundler
+	bundle install
+	npm install -g firebase-tools superstatic
 
 clean:
 	rm -fr .sass-cache/
