@@ -15,5 +15,6 @@
 @mixin grid-template() {
     display: grid;
     grid-template-columns: repeat($grid-columns, 1fr);
+    grid-template-rows: auto auto; // unfortunately, we must specify rows for grid to work in IE
     grid-column-gap: $grid-gap;
 }

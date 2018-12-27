@@ -9,6 +9,12 @@
     object-fit: contain;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .figure__media__image {
+        width: auto;
+    }
+}
+
 .figure__caption {
     @include typography(body);
 
