@@ -3,8 +3,8 @@
 @font-face {
     font-family: 'Libre Baskerville';
     src:
-        url('../fonts/LibreBaskerville-Regular.woff2') format('woff2'),
-        url('../fonts/LibreBaskerville-Regular.woff') format('woff');
+        asset_url('LibreBaskerville-Regular.woff2') format('woff2'),
+        asset_url('LibreBaskerville-Regular.woff') format('woff');
     font-weight: map-get($typography-font-weight-values, regular);
     font-style: normal;
     font-display: swap;
@@ -13,8 +13,8 @@
 @font-face {
     font-family: 'Libre Baskerville';
     src:
-        url('../fonts/LibreBaskerville-Italic.woff2') format('woff2'),
-        url('../fonts/LibreBaskerville-Italic.woff') format('woff');
+        asset_url('LibreBaskerville-Italic.woff2') format('woff2'),
+        asset_url('LibreBaskerville-Italic.woff') format('woff');
     font-weight: map-get($typography-font-weight-values, regular);
     font-style: italic;
     font-display: swap;
@@ -23,8 +23,8 @@
 @font-face {
     font-family: 'Libre Baskerville';
     src:
-        url('../fonts/LibreBaskerville-Bold.woff2') format('woff2'),
-        url('../fonts/LibreBaskerville-Bold.woff') format('woff');
+        asset_url('LibreBaskerville-Bold.woff2') format('woff2'),
+        asset_url('LibreBaskerville-Bold.woff') format('woff');
     font-weight: map-get($typography-font-weight-values, bold);
     font-style: normal;
     font-display: swap;
@@ -33,8 +33,8 @@
 @font-face {
     font-family: 'Libre Franklin';
     src:
-        url('../fonts/LibreFranklin-Thin.woff2') format('woff2'),
-        url('../fonts/LibreFranklin-Thin.woff') format('woff');
+        asset_url('LibreFranklin-Thin.woff2') format('woff2'),
+        asset_url('LibreFranklin-Thin.woff') format('woff');
     font-weight: map-get($typography-font-weight-values, thin);
     font-style: normal;
     font-display: swap;
@@ -43,8 +43,8 @@
 @font-face {
     font-family: 'Libre Franklin';
     src:
-        url('../fonts/LibreFranklin-Light.woff2') format('woff2'),
-        url('../fonts/LibreFranklin-Light.woff') format('woff');
+        asset_url('LibreFranklin-Light.woff2') format('woff2'),
+        asset_url('LibreFranklin-Light.woff') format('woff');
     font-weight: map-get($typography-font-weight-values, light);
     font-style: normal;
     font-display: swap;
@@ -53,8 +53,8 @@
 @font-face {
     font-family: 'Libre Franklin';
     src:
-        url('../fonts/LibreFranklin-Black.woff2') format('woff2'),
-        url('../fonts/LibreFranklin-Black.woff') format('woff');
+        asset_url('LibreFranklin-Black.woff2') format('woff2'),
+        asset_url('LibreFranklin-Black.woff') format('woff');
     font-weight: map-get($typography-font-weight-values, black);
     font-style: normal;
     font-display: swap;

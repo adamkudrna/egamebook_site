@@ -1,15 +1,20 @@
 name: Egamebook
-# description:
 url: http://egamebook.com
 timezone: Europe/Prague
 
+plugins:
+  - jekyll-assets
+
+assets:
+  sources:
+    - _sass/main
+
 markdown: redcarpet
 
-sass:
-  style: compressed
-
 redcarpet:
-    extensions: [smart, footnotes]
+  extensions:
+    - smart
+    - footnotes
 
 highlighter: pygments
 
@@ -25,3 +30,7 @@ defaults:
       author: "Filip Hracek"
 
 include: [".well-known"]
+
+exclude:
+  - fonts
+  - Gemfile*
