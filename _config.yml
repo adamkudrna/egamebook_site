@@ -10,6 +10,7 @@ assets:
   sources:
     - _css
     - _fonts
+    - img
 
 markdown: redcarpet
 

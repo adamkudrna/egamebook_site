@@ -74,6 +74,9 @@
     left: 24%; // 2.
     z-index: 0; // 3.
     width: 71%; // 2.
+    height: 79%; // 2.
+    overflow: hidden;
+    background-color: map-get($colors-grays, black);
 }
 
 .phone__screen {
