@@ -1,0 +1,227 @@
+---
+layout: base
+title: Egamebook — A dungeon master in your pocket
+description: "Egamebook is a project which strives to bring the gamebook (aka Choose-Your-Own-Adventure) experience to the 'new media' platforms (mobile, tablet, web, …) and to the 21st century."
+---
+
+<header class="header">
+    <div class="container">
+
+        <h1 class="typography-title">
+            <a href="{{ site.url }}">{{ site.name }}</a>
+        </h1>
+
+        <div class="grid">
+            <div class="grid__item grid__item--header-headline">
+
+                <h2 class="typography-master-headline">
+                    A Dungeon<br />
+                    Master<br />
+                    <span class="typography-master-subheadline">in Your Pocket</span>
+                </h2>
+
+            </div>
+            <div class="grid__item grid__item--header-perex">
+
+                <p class="typography-perex">
+                    Imagine reading a&nbsp;book where you can do much more than just choose a&nbsp;path. Imagine a&nbsp;book where your actions have realistic and meaningful impact on the fictional, simulated world.
+                </p>
+
+            </div>
+            <div class="grid__item grid__item--header-phone u-print-none">
+
+                <div class="phone">
+                    <div class="phone__canvas">
+                        <div class="phone__image">
+                            <div class="phone__frame">
+                                <div class="phone__frame__screen-area">
+
+                                    <!-- Phone screen: video -->
+                                    <!--<video class="phone__screen" autoplay playsinline muted loop>
+                                        <source src="https://sample-videos.com/video123/mp4/480/big_buck_bunny_480p_10mb.mp4" type="video/mp4" />
+                                    </video>-->
+
+                                    <!-- Phone screen: image -->
+                                    <img src="{% asset screen@2x.jpg @path %}" class="phone__screen" alt="Egamebook" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone__caption">Prototype</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="container">
+
+            <h2 class="typography-headline1">
+                Choose your story<br />
+                <span class="typography-subheadline1">And feel what it’s like</span>
+            </h2>
+
+            <div class="grid">
+                <div class="grid__item grid__item--text-right">
+
+                    <ol class="typography-hanging-list">
+                        <li>
+                            <p><strong>Imagine you are playing as a&nbsp;bandit</strong> and choose your base of attack to be in a&nbsp;forest between two villages. Your actions lead to one of the villages having a&nbsp;shortage of goods, leading to higher prices there. It also leads to the forest acquiring a&nbsp;fame of being home to some supernatural evil, because none of your victims make it out alive.</p>
+                        </li>
+                        <li>
+                            <p><strong>Imagine you are a&nbsp;starship pilot</strong> with an asteroid in tow. When confronted with a much bigger, hostile ship, you execute a maneuver which sends the asteroid flying toward it. The asteroid hits, resulting in structural damage, and disabling some of the ship’s outer systems, including the scanner and two thrusters. This allows you to make your escape.</p>
+                        </li>
+                        <li>
+                            <p><strong>Imagine you are a&nbsp;boxer</strong> in the midst of a championship fight. Your opponent is shifting his weight as if to prepare for a massive left hook. You decide to call his bluff, expose your side, and deal a&nbsp;punch to the face in order to throw him off balance. He was not bluffing though, and before you can hit, his left hook lands squarely on your exposed face, sending you flying to the ground.</p>
+                        </li>
+                    </ol>
+
+                </div>
+                <div class="grid__item grid__item--figure-left">
+
+                    <div class="container__expand">
+                        <figure class="figure figure--scene">
+                            <div class="figure__media">
+                                <img
+                                    src="{% asset shooting-the-bandit.jpg @path %}"
+                                    class="figure__media__image"
+                                    alt="Paul de la Gironiere shooting the bandit Cajoui, from Aventures d’un Gentilhomme Breton aux iles Philippines by Paul de la Gironiere, published in 1855"
+                                />
+                            </div>
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+
+            <h2 class="typography-headline1">
+                Gamebooks go&nbsp;live<br />
+                <span class="typography-subheadline1">How is this possible?</span>
+            </h2>
+
+            <div class="grid">
+                <div class="grid__item grid__item--text-left">
+
+                    <p>Existing electronic gamebook systems work with either scripting languages (like JavaScript) or—more often—with something even simpler (something that only allows variables and conditional statements and not much else). In contrast, egamebook (this project) is build on Dart, which is a&nbsp;mature, structured programming environment. Authors can do as little as simple arithmetic assignments, or as much as running physics simulations or complex ecologies.</p>
+                    <p>There is no limit to what the authors can implement. They have all the tooling and structure that they need for implementing complex mechanics like the ones above. Actually, in this respect, the tooling is better than for many AAA games.</p>
+
+                    <input type="checkbox" id="collapsible" class="collapsible-input" />
+                    <label
+                        for="collapsible"
+                        class="typography-note typography-link collapsible-label"
+                        data-uncollapsed-text="Show less"
+                    >
+                        <span class="collapsible-label__text">Read more</span>
+                    </label>
+                    <div class="collapsible-content">
+                        <p>In the development of titles like Skyrim, most work is spent on the visual representation. The world needs to look as realistic as possible in 3D (not just graphics, but also the way people act, walk and talk, in 3D—that’s a lot of work). Scripting (including the world ‘simulation’ logic) is often done in languages like Lua, or in something like Skyrim’s Papyrus, and tends to be the last thing to worry about. In contrast—for an egamebook—scripting is all you do (apart from writing, of course), so it makes perfect sense to give it a&nbsp;little more attention.</p>
+                        <p>An egamebook author can use libraries like Box2D for 2D physics, AStar for pathfinding, darwin for genetic algorithms, Backy for neural networks—to name a&nbsp;few. Authors can also easily create their own libraries, which they can test independently from the gamebook.</p>
+                        <p>Let’s say you need to keep track of each city in a&nbsp;game world—their population, economic characteristics, diplomacy status, and much more. In a&nbsp;language like Dart, the complexity is manageable: you create a&nbsp;City class and its logic, you test it, and when it’s ready, you then use it in your egamebook.</p>
+                    </div>
+
+                </div>
+                <div class="grid__item grid__item--figure-right">
+
+                    <div class="container__expand">
+                        <figure class="figure figure--portrait">
+                            <div class="figure__media">
+                                <img
+                                    src="{% asset bandit.jpg @path %}"
+                                    class="figure__media__image"
+                                    alt="Page 443, Mcclure’s Magazine, Mar 1897—Extract of illustration from scan of story, 'Huerfano Bill, the Bandit.'"
+                                />
+                            </div>
+                            <figcaption class="figure__caption">There is no limit to what the authors can implement.</figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+
+        <h2 class="typography-headline1">
+            Where to get&nbsp;it<br />
+            <span class="typography-subheadline1">Enough said, now show&nbsp;me</span>
+        </h2>
+
+        <div class="grid">
+            <div class="grid__item grid__item--footer-cta">
+
+                <div class="cta-layout">
+                    <div class="cta-layout__item">
+
+                        <a href="/test" class="icon-box">
+                            <span class="icon-box__icon">
+                                {% include svg/web.svg %}
+                            </span>
+                            <span class="icon-box__title">
+                                Try prototype
+                            </span>
+                        </a>
+                        <div class="tooltip">
+                            <div class="tooltip__text">
+                                It launches in your browser and it's&nbsp;free!
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cta-layout__item">
+
+                        <div class="icon-box icon-box--disabled">
+                            <span class="icon-box__icon">
+                                {% include svg/ios.svg %}
+                            </span>
+                            <span class="icon-box__title">
+                                Coming soon
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="cta-layout__item">
+
+                        <div class="icon-box icon-box--disabled">
+                            <span class="icon-box__icon">
+                                {% include svg/android.svg %}
+                            </span>
+                            <span class="icon-box__title">
+                                Coming soon
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid__item grid__item--footer-note">
+
+                <h3 class="typography-headline3">Current Status</h3>
+                <p class="typography-note">The system is being developed along with the first true egamebook, called «&nbsp;The Bodega Incident&nbsp;».</p>
+                <p class="typography-note">Already, it can do all the basic stuff and much more, but it doesn’t make sense to release it just yet. The world doesn’t need another ‘okay’ electronic gamebook system. It needs a&nbsp;polished system, with a&nbsp;shining example of a&nbsp;gamebook.</p>
+
+            </div>
+        </div>
+
+        <hr class="u-print-none" />
+
+        {% include mailchimp-signup-form.html modification="footer" %}
+
+        <hr />
+
+        {% include footer-bottom.html %}
+
+    </div>
+</footer>

@@ -1,0 +1,34 @@
+@media print {
+    *,
+    *::before,
+    *::after {
+        color: black; // black prints faster
+        background: transparent;
+    }
+
+    html,
+    body {
+        font-size: 14pt;
+    }
+
+    body {
+        min-width: 800px; // using pixels intentionally
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+}

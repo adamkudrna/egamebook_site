@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: blog
 title: Egamebook Blog
 description: "Egamebook is a project which strives to bring the gamebook (aka Choose-Your-Own-Adventure) experience to the ‘new media’ platforms (mobile, tablet, web, ...) and to the 21st century. This blog maps its journey from idea to reality."
 ---

@@ -1,0 +1,20 @@
+.header {
+    padding-top: spacing(1);
+    padding-bottom: spacing(3);
+    color: map-get($colors-grays, white);
+    background-color: map-get($colors-grays, gray-darkest);
+
+    @include breakpoint-up(lg) {
+        padding-top: spacing(2);
+    }
+
+    @include breakpoint-up(xl) {
+        padding-bottom: spacing(7);
+    }
+}
+
+.header--minimal {
+    @include breakpoint-up(xl) {
+        padding-bottom: spacing(3);
+    }
+}

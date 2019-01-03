@@ -1,0 +1,99 @@
+html {
+    font-size: $typography-font-size-base;
+
+    @include breakpoint-up(x2l) {
+        font-size: $typography-font-size-base-x2l;
+    }
+
+    @include breakpoint-up(x3l) {
+        font-size: $typography-font-size-base-x3l;
+    }
+
+    @include breakpoint-up(x4l) {
+        font-size: $typography-font-size-base-x4l;
+    }
+}
+
+body {
+    color: map-get($colors-grays, white);
+    background-color: map-get($colors-grays, gray-darkest);
+}
+
+p,
+ul,
+ol,
+dl {
+    @include typography(body);
+
+    max-width: 50ch;
+}
+
+ol,
+ul {
+    padding-left: $typography-list-padding-left;
+}
+
+ol {
+    list-style: none;
+    counter-reset: list-counter;
+}
+
+ol li {
+    counter-increment: list-counter;
+
+    &::before {
+        content: counter(list-counter) '. ';
+        float: left;
+        margin-left: -$typography-list-padding-left;
+        font-style: italic;
+    }
+}
+
+// stylelint-disable no-descending-specificity, no-duplicate-selectors
+p,
+ul,
+ol,
+dl {
+    &:last-child {
+        margin-bottom: -$typography-body-baseline-compensation;
+    }
+}
+
+ul li,
+ol li,
+dd {
+    &:not(:last-child) {
+        margin-bottom: spacing(1);
+    }
+}
+
+ul p,
+ol p,
+dl p {
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+// stylelint-enable
+
+hr {
+    margin-top: spacing(2);
+    margin-bottom: calc(#{spacing(2)} - #{$border-width});
+    border: 0;
+    border-top: $border-width solid currentColor;
+    background: none;
+
+    @include breakpoint-up(md) {
+        margin-top: spacing(3);
+        margin-bottom: calc(#{spacing(3)} - #{$border-width});
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

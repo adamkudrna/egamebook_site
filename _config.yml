@@ -1,11 +1,24 @@
-name: Egamebook – home of the new electronic gamebook
-# description: 
+name: Egamebook
 url: http://egamebook.com
 timezone: Europe/Prague
 
+plugins:
+  - jekyll-assets
+
+assets:
+  compression: true
+  sources:
+    - _css
+    - _fonts
+    - img
+
 markdown: redcarpet
+
 redcarpet:
-    extensions: [smart, footnotes]
+  extensions:
+    - smart
+    - footnotes
+
 highlighter: pygments
 
 permalink: /blog/:title/
@@ -16,7 +29,17 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "post"
+      layout: "blog-post"
       author: "Filip Hracek"
 
 include: [".well-known"]
+
+exclude:
+  - "*.js"
+  - "*.json"
+  - "*.md"
+  - "*.sh"
+  - .*rc
+  - Gemfile*
+  - makefile
+  - node_modules

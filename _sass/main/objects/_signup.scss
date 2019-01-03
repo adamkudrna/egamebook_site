@@ -1,0 +1,71 @@
+.signup__form {
+    padding-top: spacing(1);
+    margin-bottom: spacing(1);
+
+    @include breakpoint-up(md) {
+        @include grid-template();
+
+        padding-top: 0;
+    }
+}
+
+.signup__form__field {
+    margin-bottom: spacing(1);
+
+    @include breakpoint-up(md) {
+        grid-column: 1 / span 8;
+        margin-bottom: 0;
+    }
+
+    @include breakpoint-up(lg) {
+        grid-column: 2 / span 6;
+    }
+
+    @include breakpoint-up(xl) {
+        grid-column: 3 / span 5;
+    }
+}
+
+.signup__form__button {
+    @include breakpoint-up(md) {
+        grid-column: 9 / span 4;
+    }
+
+    @include breakpoint-up(lg) {
+        grid-column: 8 / span 3;
+    }
+
+    @include breakpoint-up(xl) {
+        grid-column: 8 / span 2;
+    }
+}
+
+.signup__headline,
+.signup__note {
+    @include breakpoint-up(lg) {
+        padding-left: grid-column-spacing(1, 12);
+    }
+
+    @include breakpoint-up(xl) {
+        padding-left: grid-column-spacing(2, 12);
+    }
+}
+
+.signup--footer .signup__form__field {
+    @include breakpoint-up(xl) {
+        grid-column: 1 / span 4;
+    }
+}
+
+.signup--footer .signup__form__button {
+    @include breakpoint-up(xl) {
+        grid-column: 5 / span 2;
+    }
+}
+
+.signup--footer .signup__headline,
+.signup--footer .signup__note {
+    @include breakpoint-up(xl) {
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,42 @@
+.icon-box {
+    @include transition(box-shadow);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: spacing(7);
+    padding: calc(#{spacing(1)} - #{$border-width});
+    text-align: center;
+    color: inherit;
+    border: $border-width solid currentColor;
+    border-radius: $border-radius;
+
+    &:link:focus,
+    &:link:active {
+        outline: 0;
+        box-shadow: $shadow-highlight;
+    }
+}
+
+.icon-box__icon {
+    height: spacing(2);
+    margin-top: spacing(1) / 2;
+    margin-bottom: spacing(1) / 2;
+}
+
+.icon-box__title {
+    @include typography(button);
+}
+
+.icon-box--disabled {
+    color: map-get($colors-grays, gray);
+}
+
+.icon-box--disabled .icon-box__title {
+    @include typography(body);
+
+    margin-bottom: -$typography-body-baseline-compensation;
+    font-style: italic;
+    letter-spacing: 0;
+    text-transform: none;
+}

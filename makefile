@@ -10,6 +10,8 @@ deploy: .full_build.intermediate
 	firebase deploy
 
 .full_build.intermediate: $(MARKDOWN_TOPLEVEL) $(MARKDOWN_SUBDIRS)
+	npm run lint:css
+	npm run build:css
 	jekyll build
 	touch .full_build.intermediate
 
@@ -18,9 +20,10 @@ serve:
 	./serve.sh
 
 install:
-	gem install jekyll bundler
-	npm install -g firebase-tools
-	npm install -g superstatic
+	gem install bundler
+	bundle install
+	npm install -g firebase-tools superstatic
+	npm install
 
 clean:
 	rm -fr .sass-cache/

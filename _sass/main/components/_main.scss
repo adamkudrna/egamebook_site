@@ -1,0 +1,15 @@
+.main {
+    padding-top: spacing(3);
+    padding-bottom: spacing(1);
+    color: map-get($colors-grays, gray-darkest);
+    background-color: map-get($colors-grays, white);
+
+    @include breakpoint-up(md) {
+        padding-bottom: spacing(2);
+    }
+
+    @include breakpoint-up(lg) {
+        padding-top: spacing(4);
+        padding-bottom: spacing(3);
+    }
+}

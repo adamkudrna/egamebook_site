@@ -1,0 +1,45 @@
+.cta-layout {
+    display: grid;
+    grid-template:
+        "featured featured"
+        "second third"
+        #{"/"} 1fr 1fr;
+    grid-gap: spacing(2) 1rem;
+    margin-bottom: spacing(2);
+
+    @include breakpoint-up(md) {
+        grid-template:
+            "featured second third"
+            #{"/"} 1fr 1fr 1fr;
+        grid-gap: 0 $grid-gap;
+        margin-bottom: spacing(3);
+    }
+
+    @include breakpoint-up(xl) {
+        margin-bottom: 0;
+    }
+}
+
+.cta-layout__item {
+    max-width: spacing(7);
+
+    &:first-child {
+        grid-area: featured;
+        justify-self: center;
+    }
+
+    &:nth-child(2) {
+        grid-area: second;
+        justify-self: right;
+    }
+
+    &:nth-child(3) {
+        grid-area: third;
+        justify-self: left;
+    }
+
+    @include breakpoint-up(md) {
+        width: 100%;
+        max-width: none;
+    }
+}

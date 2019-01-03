@@ -1,0 +1,29 @@
+.tooltip {
+    position: relative;
+    padding: calc(#{spacing(1)} - #{$border-width});
+    padding-top: calc(#{spacing(1) / 2} - #{$border-width});
+    margin-top: 1.5 * spacing(1);
+    text-align: center;
+    color: inherit;
+    border: $border-width solid currentColor;
+    border-radius: $border-radius;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        border-width: $border-width;
+        border-style: solid solid none none;
+        border-color: currentColor;
+        background-color: map-get($colors-grays, gray-darkest);
+        transform: translate(-50%, calc(0.5rem - #{$border-width})) rotateZ(-45deg) skewX(-5deg) skewY(-5deg);
+    }
+}
+
+.tooltip__text {
+    @include typography(tooltip);
+}

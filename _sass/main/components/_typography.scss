@@ -1,0 +1,89 @@
+.typography-master-headline {
+    @include typography(master-headline);
+}
+
+.typography-master-subheadline {
+    @include typography(master-subheadline);
+}
+
+.typography-headline1 {
+    @include typography(headline1);
+}
+
+.typography-subheadline1 {
+    @include typography(subheadline1);
+}
+
+.typography-headline2 {
+    @include typography(headline2);
+}
+
+.typography-headline3 {
+    @include typography(headline3);
+}
+
+.typography-title {
+    @include typography(title);
+
+    &:only-child {
+        margin-bottom: -0.45rem;
+    }
+
+    @include breakpoint-up(lg) {
+        &:only-child {
+            margin-bottom: -0.25rem;
+        }
+    }
+}
+
+.typography-hanging-list {
+    @include breakpoint-up(lg) {
+        margin-left: -$typography-list-padding-left;
+    }
+}
+
+.typography-perex {
+    max-width: 32ch;
+
+    &::first-line {
+        font-style: italic;
+        font-size: map-get($typography-scale, 2);
+    }
+
+    @include breakpoint-up(md) {
+        padding-top: $typography-body-baseline-compensation - 0.25rem;
+        margin-bottom: $typography-body-baseline-compensation - 0.25rem;
+
+        &::first-line {
+            font-size: map-get($typography-scale, 3);
+            line-height: spacing(1) + 0.25rem;
+        }
+    }
+}
+
+.typography-note {
+    @include typography(body);
+
+    font-style: italic;
+}
+
+.typography-link {
+    position: relative;
+    white-space: nowrap;
+
+    &::after {
+        @include transition(border-color);
+
+        content: '';
+        position: absolute;
+        bottom: 0.25rem;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid map-get($colors-grays, gray);
+    }
+
+    &:hover::after,
+    &:focus::after {
+        border-bottom-color: currentColor;
+    }
+}
