@@ -35,7 +35,6 @@ defaults:
 include: [".well-known"]
 
 exclude:
-  - "*.js"
   - "*.json"
   - "*.md"
   - "*.sh"
