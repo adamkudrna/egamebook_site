@@ -7,10 +7,11 @@ plugins:
 
 assets:
   compression: true
+  precompile: []
   sources:
+    - img
     - _css
     - _fonts
-    - img
 
 markdown: redcarpet
 
