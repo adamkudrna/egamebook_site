@@ -1,12 +1,10 @@
-@import "typography";
-
 @font-face {
     font-style: normal;
     font-weight: map-get($typography-font-weight-values, regular);
     font-family: 'Libre Baskerville';
     src:
-        asset_url('LibreBaskerville-Regular.woff2') format('woff2'),
-        asset_url('LibreBaskerville-Regular.woff') format('woff');
+        url(../fonts/LibreBaskerville-Regular.woff2?v=2019021201) format('woff2'),
+        url(../fonts/LibreBaskerville-Regular.woff?v=2019021201) format('woff');
     font-display: swap;
 }
 
@@ -15,8 +13,8 @@
     font-weight: map-get($typography-font-weight-values, regular);
     font-family: 'Libre Baskerville';
     src:
-        asset_url('LibreBaskerville-Italic.woff2') format('woff2'),
-        asset_url('LibreBaskerville-Italic.woff') format('woff');
+        url(../fonts/LibreBaskerville-Italic.woff2?v=2019021201) format('woff2'),
+        url(../fonts/LibreBaskerville-Italic.woff?v=2019021201) format('woff');
     font-display: swap;
 }
 
@@ -25,8 +23,8 @@
     font-weight: map-get($typography-font-weight-values, bold);
     font-family: 'Libre Baskerville';
     src:
-        asset_url('LibreBaskerville-Bold.woff2') format('woff2'),
-        asset_url('LibreBaskerville-Bold.woff') format('woff');
+        url(../fonts/LibreBaskerville-Bold.woff2?v=2019021201) format('woff2'),
+        url(../fonts/LibreBaskerville-Bold.woff?v=2019021201) format('woff');
     font-display: swap;
 }
 
@@ -35,8 +33,8 @@
     font-weight: map-get($typography-font-weight-values, thin);
     font-family: 'Libre Franklin';
     src:
-        asset_url('LibreFranklin-Thin.woff2') format('woff2'),
-        asset_url('LibreFranklin-Thin.woff') format('woff');
+        url(../fonts/LibreFranklin-Thin.woff2?v=2019021201) format('woff2'),
+        url(../fonts/LibreFranklin-Thin.woff?v=2019021201) format('woff');
     font-display: swap;
 }
 
@@ -45,8 +43,8 @@
     font-weight: map-get($typography-font-weight-values, light);
     font-family: 'Libre Franklin';
     src:
-        asset_url('LibreFranklin-Light.woff2') format('woff2'),
-        asset_url('LibreFranklin-Light.woff') format('woff');
+        url(../fonts/LibreFranklin-Light.woff2?v=2019021201) format('woff2'),
+        url(../fonts/LibreFranklin-Light.woff?v=2019021201) format('woff');
     font-display: swap;
 }
 
@@ -55,7 +53,7 @@
     font-weight: map-get($typography-font-weight-values, black);
     font-family: 'Libre Franklin';
     src:
-        asset_url('LibreFranklin-Black.woff2') format('woff2'),
-        asset_url('LibreFranklin-Black.woff') format('woff');
+        url(../fonts/LibreFranklin-Black.woff2?v=2019021201) format('woff2'),
+        url(../fonts/LibreFranklin-Black.woff?v=2019021201) format('woff');
     font-display: swap;
 }
