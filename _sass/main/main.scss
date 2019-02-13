@@ -1,37 +1,43 @@
-// Settings
+// 1. Settings
+// Global variables, config switches. Not producing any CSS.
 @import "settings/borders";
 @import "settings/breakpoints";
 @import "settings/collapsible";
 @import "settings/colors";
-@import "settings/fonts";
 @import "settings/grid";
 @import "settings/shadows";
 @import "settings/typography";
 
-// Tools
+// 2. Tools
+// Default mixins and functions. Still not producing any CSS.
 @import "tools/breakpoints";
 @import "tools/grid";
 @import "tools/spacing";
 @import "tools/transitions";
 @import "tools/typography";
 
-// Generic
+// 3. Generic
+// Ground-zero styles.
+@import "generic/fonts";
 @import "generic/box-sizing";
 @import "generic/reset";
 @import "generic/ie11";
 @import "generic/print";
 
-// Elements
+// 4. Elements
+// Unclassed HTML elements (type selectors).
 @import "elements/elements";
 
-// Objects
+// 5. Objects
+// Cosmetic-free design patterns.
 @import "objects/container";
 @import "objects/cta-layout";
 @import "objects/grid";
 @import "objects/section";
 @import "objects/signup";
 
-// Components
+// 7. Components
+// Actual UI components.
 @import "components/button";
 @import "components/collapsible";
 @import "components/figure";
@@ -44,5 +50,6 @@
 @import "components/tooltip";
 @import "components/typography";
 
-// Utilities
+// 8. Utilities
+// High-specificity overrides.
 @import "utilities/print";

@@ -37,12 +37,14 @@ description: "Egamebook is a project which strives to bring the gamebook (aka Ch
                                 <div class="phone__frame__screen-area">
 
                                     <!-- Phone screen: video -->
-                                    <video class="phone__screen" autoplay playsinline muted loop poster="{% asset screencast-poster.jpg @path %}">
-                                        <source src="{% asset screencast.mp4 @path %}" type="video/mp4" />
+                                    <video class="phone__screen" autoplay playsinline muted loop poster="/img/screencast-poster.jpg?v=2019021201">
+                                        <source src="/img/screencast.mp4?v=2019021201" type="video/mp4" />
                                     </video>
 
+                                    {% comment %}
                                     <!-- Phone screen: image -->
-                                    <!--<img src="{% asset screen@2x.jpg @path %}" class="phone__screen" alt="Egamebook" />-->
+                                    <img src="/img/screen@2x.jpg?v=2019021201" class="phone__screen" alt="Egamebook" />
+                                    {% endcomment %}
 
                                 </div>
                             </div>
@@ -82,7 +84,7 @@ description: "Egamebook is a project which strives to bring the gamebook (aka Ch
                         <figure class="figure figure--scene">
                             <div class="figure__media">
                                 <img
-                                    src="{% asset shooting-the-bandit.jpg @path %}"
+                                    src="/img/shooting-the-bandit.jpg?v=2019021201"
                                     class="figure__media__image"
                                     alt="Paul de la Gironiere shooting the bandit Cajoui, from Aventures d’un Gentilhomme Breton aux iles Philippines by Paul de la Gironiere, published in 1855"
                                 />
@@ -99,7 +101,7 @@ description: "Egamebook is a project which strives to bring the gamebook (aka Ch
     <section class="section">
         <div class="container">
             <img
-                src="{% asset rendered-in-text.png @path %}"
+                src="/img/rendered-in-text.png?v=2019021201"
                 class="figure__media__image"
                 alt="An image that shows a video-game screen on the left, an internal representation in the middle, and a description of the representation on the right. The description says: 'Behind Ralof's back, and beyond a large rock formation, you see a sleeping bear.'. Taken from Filip's article 'Skyrim rendered in text'."
             />
@@ -122,17 +124,20 @@ description: "Egamebook is a project which strives to bring the gamebook (aka Ch
                     <p>The design of the game is deliberately as close to a reading app as possible. No superficial animations, thrown dice, or skeuomorphic buttons. The game interface is clean and minimal. If a random stranger looks over your shoulder, they won't think you're playing a text-heavy videogame. They will think you're reading a new kind of book.</p>
                     <p>When we're commuting or when we manage to steal those few minutes of "me" time, we're not whipping out a <em>PlayStation</em> with <em>Uncharted</em> or a PC with <em>Skyrim</em> or a <em>Switch</em> with <em>Fortnite</em>. Even if we do, how well are we able to get into flow in the limited time and space available to us?</p>
 
-                    <!--<input type="checkbox" id="collapsible" class="collapsible-input" />-->
-                    <!--<label-->
-                        <!--for="collapsible"-->
-                        <!--class="typography-note typography-link collapsible-label"-->
-                        <!--data-uncollapsed-text="Show less"-->
-                    <!--&gt;-->
-                        <!--<span class="collapsible-label__text">Read more</span>-->
-                    <!--</label>-->
-                    <!--<div class="collapsible-content">-->
-                        <!--<p>POTENTIALLY ADD MORE HERE</p>-->
-                    <!--</div>-->
+                    {% comment %}
+                    <!-- We don't currently need collapsing content, but it's here. -->
+                    <input type="checkbox" id="collapsible" class="collapsible-input" />
+                    <label
+                        for="collapsible"
+                        class="typography-note typography-link collapsible-label"
+                        data-uncollapsed-text="Show less"
+                    >
+                        <span class="collapsible-label__text">Read more</span>
+                    </label>
+                    <div class="collapsible-content">
+                        <p>POTENTIALLY ADD MORE HERE</p>
+                    </div>
+                    {% endcomment %}
 
                 </div>
                 <div class="grid__item grid__item--figure-right">
@@ -141,7 +146,7 @@ description: "Egamebook is a project which strives to bring the gamebook (aka Ch
                         <figure class="figure figure--portrait">
                             <div class="figure__media">
                                 <img
-                                    src="{% asset bandit.jpg @path %}"
+                                    src="/img/bandit.jpg?v=2019021201"
                                     class="figure__media__image"
                                     alt="Page 443, Mcclure’s Magazine, Mar 1897—Extract of illustration from scan of story, 'Huerfano Bill, the Bandit.'"
                                 />
@@ -177,7 +182,7 @@ description: "Egamebook is a project which strives to bring the gamebook (aka Ch
                         <figure class="figure figure--scene">
                             <div class="figure__media">
                                 <img
-                                    src="{% asset combat-resolution.jpg @path %}"
+                                    src="/img/combat-resolution.jpg?v=2019021201"
                                     class="figure__media__image"
                                     alt="Dendrono - Der fechtende Student (etching)"
                                 />
@@ -213,7 +218,7 @@ description: "Egamebook is a project which strives to bring the gamebook (aka Ch
                         <figure class="figure figure--portrait">
                             <div class="figure__media">
                                 <img
-                                    src="{% asset introspective-leisure.jpg @path %}"
+                                    src="/img/introspective-leisure.jpg?v=2019021201"
                                     class="figure__media__image"
                                     alt="A drawing of women playing chess in a family setting."
                                 />

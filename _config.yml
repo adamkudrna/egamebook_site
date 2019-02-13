@@ -1,17 +1,6 @@
 name: Egamebook
-url: http://egamebook.com
+url: https://egamebook.com
 timezone: Europe/Prague
-
-plugins:
-  - jekyll-assets
-
-assets:
-  compression: true
-  precompile: []
-  sources:
-    - img
-    - _css
-    - _fonts
 
 markdown: redcarpet
 
@@ -33,7 +22,8 @@ defaults:
       layout: "blog-post"
       author: "Filip Hracek"
 
-include: [".well-known"]
+include:
+  - .well-known
 
 exclude:
   - "*.json"
@@ -43,3 +33,8 @@ exclude:
   - Gemfile*
   - makefile
   - node_modules
+  - postcss.config.js
+
+keep_files:
+  - css/main.min.css
+  - css/main.min.css.map
