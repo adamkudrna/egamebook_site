@@ -4,7 +4,8 @@ Use `make` to build, serve and deploy. For example:
 
 * `$ make install` to install everything necessary
 * `$ make build` to build the site from source
-* `$ make serve` to develop the site on `localhost:5000` with a fast edit-refresh cycle
+* `$ make serve` to develop the site on `localhost:3000` with a fast edit-refresh cycle, using
+  [BrowserSync](https://www.browsersync.io)
 * `$ make deploy` to upload to Firebase
 * `$ make clean` to clean up all generated files, useful for a clean build
 

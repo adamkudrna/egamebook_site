@@ -5,8 +5,10 @@
   "devDependencies": {
     "@visionappscz/stylelint-config-visionapps-order": "^1.0.0",
     "autoprefixer": "^9.4.7",
+    "browser-sync": "^2.26.3",
     "chokidar-cli": "^1.2.2",
     "clean-css-cli": "^4.2.1",
+    "concurrently": "^4.1.0",
     "mkdirp": "~0.5.1",
     "node-sass": "^4.11.0",
     "postcss-cli": "^6.1.1",
@@ -21,7 +23,7 @@
     "css:build": "node-sass _sass/main/main.scss --output-style expanded --source-map true --source-map-contents true --output _css && postcss _css/main.css --replace && cleancss _css/main.css --level 1 --source-map --source-map-inline-sources --output _site/css/main.min.css",
     "css:watch": "chokidar \"_sass/main/**/*.scss\" --command \"npm run css:lint && npm run css:build\"",
     "build": "npm run css:lint && npm run css:build",
-    "dev": "npm run build && npm run css:watch"
+    "dev": "npm run build && concurrently \"npm run css:watch\" \"browser-sync http://0.0.0.0:5000 _site -w --no-open\""
   },
   "repository": {
     "type": "git",
