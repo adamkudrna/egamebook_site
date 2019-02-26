@@ -5,7 +5,9 @@
   "devDependencies": {
     "@visionappscz/stylelint-config-visionapps-order": "^1.0.0",
     "autoprefixer": "^9.4.7",
+    "chokidar-cli": "^1.2.2",
     "clean-css-cli": "^4.2.1",
+    "mkdirp": "~0.5.1",
     "node-sass": "^4.11.0",
     "postcss-cli": "^6.1.1",
     "stylelint": "^9.10.1",
@@ -14,8 +16,12 @@
     "stylelint-scss": "^3.5.3"
   },
   "scripts": {
-    "lint:css": "stylelint --syntax scss \"_sass/main/**/*.scss\"",
-    "build:css": "node-sass --output-style expanded --source-map true --source-map-contents true --output _css _sass/main/main.scss && postcss _css/main.css --replace && cleancss --level 1 --source-map --source-map-inline-sources --output _site/css/main.min.css _css/main.css"
+    "css:lint": "stylelint --syntax scss \"_sass/main/**/*.scss\"",
+    "precss:build": "mkdirp ./_site/css",
+    "css:build": "node-sass _sass/main/main.scss --output-style expanded --source-map true --source-map-contents true --output _css && postcss _css/main.css --replace && cleancss _css/main.css --level 1 --source-map --source-map-inline-sources --output _site/css/main.min.css",
+    "css:watch": "chokidar \"_sass/main/**/*.scss\" --command \"npm run css:lint && npm run css:build\"",
+    "build": "npm run css:lint && npm run css:build",
+    "dev": "npm run build && npm run css:watch"
   },
   "repository": {
     "type": "git",

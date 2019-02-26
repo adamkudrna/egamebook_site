@@ -8,19 +8,12 @@ Use `make` to build, serve and deploy. For example:
 * `$ make deploy` to upload to Firebase
 * `$ make clean` to clean up all generated files, useful for a clean build
 
-## Front-end Development
-
-### Serve the site
-
-⚠️ Currently, `make serve` does not watch over changes in SCSS. Run `make build` to compile CSS
-(using npm) if any changes to SCSS have been made.
-
 ## Before Deploying
 
 ### Invalidate cached assets
 
 Before deploying any changes to CSS, images or other media linked in HTML or CSS, update query
-string in all requests for such assets. Make sure all requests for a file feature the same query
+string in all requests for such assets. Make sure all requests for a file use the same query
 string, eg.:
 
 ```html
