@@ -12,6 +12,7 @@
 // Default mixins and functions. Still not producing any CSS.
 @import "tools/breakpoints";
 @import "tools/grid";
+@import "tools/ie-only";
 @import "tools/spacing";
 @import "tools/transitions";
 @import "tools/typography";
