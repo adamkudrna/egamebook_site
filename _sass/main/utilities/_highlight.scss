@@ -1,0 +1,13 @@
+.u-highlight {
+    padding: 0.05em 0.4em;
+    white-space: nowrap;
+    border-radius: $border-radius;
+    background-color: map-get($colors-grays, gray-lighter);
+}
+
+@each $key, $value in $colors {
+    .u-highlight--#{$key} {
+        color: $value;
+        background-color: transparentize($value, 0.75);
+    }
+}

@@ -194,6 +194,16 @@ $typography-styles: (
             font-family: $typography-font-family-serif,
         ),
     ),
+    blockquote: (
+        default: (
+            padding-top: $typography-body-baseline-compensation,
+            margin: 0 0 (spacing(1) - $typography-body-baseline-compensation) 0,
+            font-weight: map-get($typography-font-weight-values, regular),
+            font-size: map-get($typography-scale, 1),
+            line-height: spacing(1),
+            font-family: $typography-font-family-serif,
+        ),
+    ),
     small: (
         default: (
             padding-top: 0.5rem,
@@ -202,6 +212,17 @@ $typography-styles: (
             font-size: map-get($typography-scale, -1),
             line-height: spacing(1),
             font-family: $typography-font-family-serif,
+        ),
+    ),
+    figure-caption: (
+        default: (
+            padding-top: $typography-body-baseline-compensation,
+            margin-bottom: spacing(1) - $typography-body-baseline-compensation,
+            font-weight: map-get($typography-font-weight-values, regular),
+            font-size: map-get($typography-scale, 1),
+            line-height: spacing(1),
+            font-family: $typography-font-family-serif,
+            font-style: italic,
         ),
     ),
     button: (
