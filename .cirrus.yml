@@ -1,0 +1,5 @@
+container:
+  image: jekyll/jekyll:latest
+
+build_task:
+  build_script: make build
