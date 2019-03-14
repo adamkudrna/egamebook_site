@@ -2,5 +2,9 @@ container:
   image: jekyll/jekyll:latest
 
 build_task:
+  ls_script: ls -la
   prebuild_script: chmod -R +rwt /tmp
-  build_script: make build
+  build_script: jekyll build -d $JEKYLL_DATA_DIR
+
+lint_task:
+  lint_script: npm run lint:css

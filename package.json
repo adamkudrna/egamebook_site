@@ -21,7 +21,7 @@
     "type": "git",
     "url": "git+https://github.com/filiph/egamebook_site.git"
   },
-  "homepage": "http://egambook.com",
+  "homepage": "https://egamebook.com",
   "engines": {
     "node": ">=8.12"
   }
