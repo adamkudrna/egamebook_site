@@ -1,4 +1,4 @@
-# egamebook.com site
+# egamebook.com site [![Build Status](https://api.cirrus-ci.com/github/filiph/egamebook_site.svg)](https://cirrus-ci.com/github/filiph/egamebook_site)
 
 Use `make` to build, serve and deploy. For example:
 
