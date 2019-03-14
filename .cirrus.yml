@@ -2,5 +2,5 @@ container:
   image: jekyll/jekyll:latest
 
 build_task:
-  prebuild_script: chmod +t /var/lib/docker/tmp
+  prebuild_script: chmod +t /tmp
   build_script: make build
