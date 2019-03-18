@@ -34,3 +34,18 @@
         margin-left: 0;
     }
 }
+
+.container__expand__text {
+    padding-right: spacing(1);
+    padding-left: spacing(1);
+
+    @include breakpoint-up(sm) {
+        padding-right: spacing(2);
+        padding-left: spacing(2);
+    }
+
+    @include breakpoint-up(md) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

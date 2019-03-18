@@ -122,7 +122,8 @@
 }
 
 .figure--bandits .figure__media__image,
-.figure--chess .figure__media__image {
+.figure--chess .figure__media__image,
+.figure--scene .figure__media__image {
     object-fit: cover;
 
     @include breakpoint-up(sm) {
@@ -136,13 +137,5 @@
 
     @include breakpoint-up(sm) {
         transform: none;
-    }
-}
-
-.figure--portrait .figure__caption {
-    display: none;
-
-    @include breakpoint-up(md) {
-        display: block;
     }
 }

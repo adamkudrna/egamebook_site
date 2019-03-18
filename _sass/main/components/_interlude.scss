@@ -1,7 +1,7 @@
 .interlude {
     padding-top: spacing(3);
     padding-bottom: spacing(3);
-    margin-top: spacing(2);
+    margin-top: spacing(1);
     margin-bottom: spacing(2);
     color: map-get($colors-grays, white);
     background-color: map-get($colors-grays, gray-darkest);
@@ -9,7 +9,7 @@
     @include breakpoint-up(sm) {
         padding-top: spacing(4);
         padding-bottom: spacing(4);
-        margin-bottom: spacing(2);
+        margin-top: spacing(2);
     }
 
     @include breakpoint-up(md) {
