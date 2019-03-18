@@ -27,13 +27,13 @@ include:
 
 exclude:
   - "*.json"
-  - "*.md"
   - "*.sh"
   - .*rc
   - Gemfile*
   - makefile
   - node_modules
   - postcss.config.js
+  - .idea
 
 keep_files:
   - css/main.min.css
