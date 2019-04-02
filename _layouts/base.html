@@ -30,6 +30,32 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-495778-10');
+
+        // {% comment %}
+        // START CUSTOM ANALYTICS CODE
+        // Modifications for AdWords conversion tracking ($1-a-day account).
+        // {% endcomment %}
+        gtag('config', 'AW-752861179');
+
+        // {% comment %}
+        // Event snippet for newsletter conversion.
+        // {% endcomment %}
+        function gtag_report_sign_up(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-752861179/X_APCPmU75cBEPv__uYC',
+                'event_callback': callback
+            });
+            gtag('event', 'sign_up');
+            return false;
+        }
+        // {% comment %}
+        // END CUSTOM ANALYTICS CODE
+        // {% endcomment %}
     </script>
 </head>
 <body>
