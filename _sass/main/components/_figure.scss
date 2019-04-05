@@ -7,19 +7,16 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .figure__media__image {
+    @include ie-only() {
         width: auto;
     }
 }
 
 .figure__caption {
-    @include typography(body);
+    @include typography(figure-caption);
 
     margin-top: spacing(1);
-    font-style: italic;
     text-align: center;
 
     @include breakpoint-up(lg) {
@@ -27,11 +24,13 @@
     }
 }
 
-.figure--scene {
+.figure--spaced {
     padding-top: spacing(2);
+    padding-bottom: spacing(1);
 
-    @include breakpoint-up(md) {
+    @include breakpoint-up(sm) {
         padding-top: spacing(3);
+        padding-bottom: 0;
     }
 
     @include breakpoint-up(lg) {
@@ -39,11 +38,57 @@
     }
 }
 
+.figure--bandits .figure__media,
+.figure--chess .figure__media,
+.figure--scene .figure__media {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.figure--bandits .figure__media {
+    max-width: 26rem;
+    height: spacing(10);
+
+    @include breakpoint-up(sm) {
+        max-width: none;
+        height: spacing(12);
+    }
+
+    @include breakpoint-up(md) {
+        height: spacing(14);
+    }
+
+    @include breakpoint-up(xl) {
+        height: spacing(16);
+    }
+}
+
+.figure--chess .figure__media {
+    max-width: 24rem;
+    height: spacing(11);
+
+    @include breakpoint-up(sm) {
+        max-width: none;
+        height: spacing(12);
+    }
+
+    @include breakpoint-up(md) {
+        height: spacing(14);
+    }
+
+    @include breakpoint-up(lg) {
+        height: spacing(10);
+        margin-left: grid-column-spacing(-1, 4);
+    }
+
+    @include breakpoint-up(xl) {
+        height: spacing(12);
+    }
+}
+
 .figure--scene .figure__media {
     max-width: 26rem;
     height: spacing(14);
-    margin-right: auto;
-    margin-left: auto;
 
     @include breakpoint-up(md) {
         max-width: none;
@@ -59,6 +104,25 @@
     }
 }
 
+.figure--portrait .figure__media {
+    height: spacing(13);
+
+    @include breakpoint-up(md) {
+        height: spacing(14);
+    }
+
+    @include breakpoint-up(lg) {
+        height: spacing(16);
+        margin-left: grid-column-spacing(-1, 4);
+    }
+
+    @include breakpoint-up(xl) {
+        height: spacing(19);
+    }
+}
+
+.figure--bandits .figure__media__image,
+.figure--chess .figure__media__image,
 .figure--scene .figure__media__image {
     object-fit: cover;
 
@@ -68,42 +132,10 @@
     }
 }
 
-.figure--portrait {
-    padding-top: spacing(1);
-
-    @include breakpoint-up(md) {
-        padding-top: spacing(2);
-    }
-
-    @include breakpoint-up(lg) {
-        padding-top: 0;
-    }
-}
-
-.figure--portrait .figure__media {
-    height: spacing(16);
-
-    @include breakpoint-up(lg) {
-        margin-left: grid-column-spacing(-1, 4);
-    }
-
-    @include breakpoint-up(xl) {
-        height: spacing(19);
-    }
-}
-
 .figure--portrait .figure__media__image {
     transform: translateX(2rem);
 
-    @include breakpoint-up(md) {
+    @include breakpoint-up(sm) {
         transform: none;
-    }
-}
-
-.figure--portrait .figure__caption {
-    display: none;
-
-    @include breakpoint-up(md) {
-        display: block;
     }
 }

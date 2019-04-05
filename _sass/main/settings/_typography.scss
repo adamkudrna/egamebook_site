@@ -10,7 +10,7 @@ $typography-font-weight-values: (
 );
 
 $typography-font-size-base: 100%; // 16 px
-$typography-font-size-base-x2l: 106.26%; // 17 px
+$typography-font-size-base-x2l: 106.25%; // 17 px
 $typography-font-size-base-x3l: 112.5%; // 18 px
 $typography-font-size-base-x4l: 118.75%; // 19 px
 $typography-line-height-base: 1.75rem;
@@ -107,7 +107,7 @@ $typography-styles: (
             ),
             lg: (
                 padding-top: 0.5rem,
-                margin-bottom: spacing(4) - 0.5rem,
+                margin-bottom: spacing(5) - 0.5rem,
                 font-size: map-get($typography-scale, 7),
             ),
         ),
@@ -126,15 +126,14 @@ $typography-styles: (
         ),
         breakpoints: (
             md: (
-                padding-top: 0.55rem,
-                margin-bottom: -0.55rem,
+                padding-top: 1.45rem,
+                margin-bottom: -1.45rem,
                 font-size: map-get($typography-scale, 3),
-                line-height: spacing(2),
             ),
             lg: (
-                padding-top: 0.7rem,
+                padding-top: 1.55rem,
                 padding-left: grid-column-spacing(1, 12),
-                margin-bottom: -0.7rem,
+                margin-bottom: -1.55rem,
                 font-size: map-get($typography-scale, 4),
             ),
             xl: (
@@ -195,6 +194,16 @@ $typography-styles: (
             font-family: $typography-font-family-serif,
         ),
     ),
+    blockquote: (
+        default: (
+            padding-top: $typography-body-baseline-compensation,
+            margin: 0 0 (spacing(1) - $typography-body-baseline-compensation) 0,
+            font-weight: map-get($typography-font-weight-values, regular),
+            font-size: map-get($typography-scale, 1),
+            line-height: spacing(1),
+            font-family: $typography-font-family-serif,
+        ),
+    ),
     small: (
         default: (
             padding-top: 0.5rem,
@@ -203,6 +212,17 @@ $typography-styles: (
             font-size: map-get($typography-scale, -1),
             line-height: spacing(1),
             font-family: $typography-font-family-serif,
+        ),
+    ),
+    figure-caption: (
+        default: (
+            padding-top: $typography-body-baseline-compensation,
+            margin-bottom: spacing(1) - $typography-body-baseline-compensation,
+            font-weight: map-get($typography-font-weight-values, regular),
+            font-size: map-get($typography-scale, 1),
+            line-height: spacing(1),
+            font-family: $typography-font-family-serif,
+            font-style: italic,
         ),
     ),
     button: (

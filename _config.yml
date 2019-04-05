@@ -29,6 +29,7 @@ exclude:
   - "*.json"
   - "*.sh"
   - .*rc
+  - .sass-cache
   - Gemfile*
   - makefile
   - node_modules

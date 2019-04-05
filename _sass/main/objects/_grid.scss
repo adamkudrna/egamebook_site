@@ -93,13 +93,14 @@
     }
 }
 
-// Specify row for IE
 .grid__item--figure-left,
 .grid__item--figure-right {
+    // Specify row for IE
     @include breakpoint-up(md) {
         grid-row: 2;
     }
 
+    // Specify row for IE
     @include breakpoint-up(lg) {
         grid-row: 1;
     }

@@ -1,4 +1,4 @@
-@function grid-column-spacing($offset, $context) {
+@function grid-column-spacing($offset, $context, $include-gap: true) {
     @if ($offset % 1 != 0) {
         @error "Grid spacing can only be adjusted by whole columns, #{$offset} given.";
     }
@@ -8,7 +8,13 @@
     }
 
     @else {
-        @return calc(#{$offset} * (#{spacing(1)} + (100% - #{$context - 1} * #{spacing(1)}) / #{$context}));
+        $spacing: calc(#{$offset} * (#{$grid-gap} + (100% - #{$context - 1} * #{$grid-gap}) / #{$context}));
+
+        @if not $include-gap {
+            $spacing: calc(#{$offset} * (#{$grid-gap} + (100% - #{$context - 1} * #{$grid-gap}) / #{$context}) - #{$grid-gap});
+        }
+
+        @return $spacing;
     }
 }
 
@@ -17,13 +23,7 @@
 // https://github.com/postcss/autoprefixer#grid-autoplacement-support-in-ie
 @mixin grid-template() {
     display: grid;
-
-    // Handle this prefix manually since jekyll-assets removes braces from IE repeat syntax 🙈.
-    // autoprefixer: off
-    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat($grid-columns, 1fr);
-    // autoprefixer: on
-
     grid-template-rows: auto auto;
     grid-column-gap: $grid-gap;
 }

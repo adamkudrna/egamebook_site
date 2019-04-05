@@ -1,4 +1,17 @@
 .section {
-    padding-top: spacing(2);
-    padding-bottom: spacing(2);
+    padding-top: spacing(1);
+    padding-bottom: spacing(1);
+
+    @include breakpoint-up(sm) {
+        padding-top: spacing(2);
+        padding-bottom: spacing(2);
+    }
+
+    @include breakpoint-up(md) {
+        padding-bottom: spacing(3);
+    }
+
+    @include breakpoint-up(lg) {
+        padding-bottom: spacing(4);
+    }
 }

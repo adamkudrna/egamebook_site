@@ -4,15 +4,14 @@ MARKDOWN_SUBDIRS := $(wildcard **/*.markdown)
 .SECONDARY: .full_build.intermediate
 
 build: .full_build.intermediate
-	@echo "=== Site built ==="
+	@tput setaf 2; echo "Site built"; tput sgr 0
 
 deploy: .full_build.intermediate
 	firebase deploy
 
 .full_build.intermediate: $(MARKDOWN_TOPLEVEL) $(MARKDOWN_SUBDIRS)
 	jekyll build
-	npm run lint:css
-	npm run build:css
+	npm run build
 	touch .full_build.intermediate
 
 serve:

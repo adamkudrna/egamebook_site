@@ -12,6 +12,7 @@
 // Default mixins and functions. Still not producing any CSS.
 @import "tools/breakpoints";
 @import "tools/grid";
+@import "tools/ie-only";
 @import "tools/spacing";
 @import "tools/transitions";
 @import "tools/typography";
@@ -21,6 +22,7 @@
 @import "generic/fonts";
 @import "generic/box-sizing";
 @import "generic/reset";
+@import "generic/selection";
 @import "generic/ie11";
 @import "generic/print";
 
@@ -33,23 +35,27 @@
 @import "objects/container";
 @import "objects/cta-layout";
 @import "objects/grid";
+@import "objects/scheme-layout";
 @import "objects/section";
 @import "objects/signup";
 
-// 7. Components
+// 6. Components
 // Actual UI components.
 @import "components/button";
 @import "components/collapsible";
 @import "components/figure";
 @import "components/footer";
 @import "components/header";
+@import "components/interlude";
 @import "components/main";
 @import "components/icon-box";
 @import "components/phone";
+@import "components/scheme-figure";
 @import "components/textfield";
 @import "components/tooltip";
 @import "components/typography";
 
-// 8. Utilities
+// 7. Utilities
 // High-specificity overrides.
+@import "utilities/highlight";
 @import "utilities/print";

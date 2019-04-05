@@ -1,0 +1,41 @@
+.scheme-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: spacing(2);
+
+    @include breakpoint-up(sm) {
+        padding-top: spacing(1);
+    }
+
+    @include breakpoint-up(md) {
+        @include grid-template();
+
+        padding-top: spacing(2);
+    }
+
+    @include breakpoint-up(lg) {
+        padding-top: 0;
+    }
+}
+
+@include breakpoint-up(md) {
+    .scheme-layout__item--1 {
+        grid-column: 4 / span 6;
+
+        // Emulate grid row gap in IE
+        @include ie-only() {
+            margin-bottom: spacing(2);
+        }
+    }
+
+    .scheme-layout__item--2 {
+        grid-column: 1 / span 6;
+        grid-row: 2; // specify row for IE
+    }
+
+    .scheme-layout__item--3 {
+        grid-column: 7 / span 6;
+        grid-row: 2; // specify row for IE
+    }
+}

@@ -1,5 +1,6 @@
 .tooltip {
     position: relative;
+    display: inline-block;
     padding: calc(#{spacing(1)} - #{$border-width});
     padding-top: calc(#{spacing(1) / 2} - #{$border-width});
     margin-top: 1.5 * spacing(1);
@@ -20,7 +21,7 @@
         border-style: solid solid none none;
         border-color: currentColor;
         background-color: map-get($colors-grays, gray-darkest);
-        transform: translate(-50%, calc(0.5rem - #{$border-width})) rotateZ(-45deg) skewX(-5deg) skewY(-5deg);
+        transform: translate(-50%, 0.5rem) translateY(- #{$border-width}) rotateZ(-45deg) skewX(-5deg) skewY(-5deg);
     }
 }
 

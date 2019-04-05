@@ -4,5 +4,14 @@ $colors-grays: (
     gray-darker: lighten(#000, 15%),
     gray-dark: lighten(#000, 25%),
     gray: lighten(#000, 60%),
+    gray-light: lighten(#000, 85%),
+    gray-lighter: lighten(#000, 90%),
+    gray-lightest: lighten(#000, 95%),
     white: #fff,
+);
+
+$colors: (
+    yellow: #ffca19,
+    magenta: #f400ff,
+    turquoise: #14cca8,
 );
