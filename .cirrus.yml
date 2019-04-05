@@ -7,8 +7,8 @@ build_task:
   chmod_script: chmod +t /tmp
   build_script: jekyll build -d $JEKYLL_DATA_DIR
   npm_install_script: npm install
-  css_lint_script: npm run lint:css
-  # TODO: add full build including `npm run build:css` (must solve chown issues)
+  css_lint_script: npm run css:lint
+  # TODO: add full build including `npm run build` (must solve chown issues)
   # TODO: add linkchecking (depends on having a Dockerfile with added Dart)
 
 # TODO: add deployment script (https://cirrus-ci.org/guide/docker-builder/)
