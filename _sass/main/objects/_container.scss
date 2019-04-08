@@ -1,3 +1,8 @@
+// Container provides horizontal spacing to content.
+//
+// 1. `.container__expand` allows to spread visual content over whole screen width on small displays.
+// 2. `.container__expand__text` brings back horizontal spacing removed by `.container__expand` (useful for descriptions).
+
 .container {
     max-width: 90rem;
     padding-right: spacing(1);
@@ -20,6 +25,7 @@
     }
 }
 
+// 1.
 .container__expand {
     margin-right: spacing(-1);
     margin-left: spacing(-1);
@@ -35,6 +41,7 @@
     }
 }
 
+// 2.
 .container__expand__text {
     padding-right: spacing(1);
     padding-left: spacing(1);

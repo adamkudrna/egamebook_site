@@ -32,30 +32,31 @@
 
 // 5. Objects
 // Cosmetic-free design patterns.
+@import "objects/collapsible";
 @import "objects/container";
 @import "objects/cta-layout";
+@import "objects/figure";
 @import "objects/grid";
-@import "objects/scheme-layout";
+@import "objects/main";
+@import "objects/panel";
+@import "objects/pyramid-layout";
 @import "objects/section";
 @import "objects/signup";
 
 // 6. Components
 // Actual UI components.
 @import "components/button";
-@import "components/collapsible";
-@import "components/figure";
+@import "components/explanation-figure";
 @import "components/footer";
 @import "components/header";
-@import "components/interlude";
-@import "components/main";
 @import "components/icon-box";
 @import "components/phone";
-@import "components/scheme-figure";
 @import "components/textfield";
 @import "components/tooltip";
-@import "components/typography";
 
 // 7. Utilities
-// High-specificity overrides.
+// Helpers and overrides.
+@import "utilities/color-variant";
 @import "utilities/highlight";
 @import "utilities/print";
+@import "utilities/typography";

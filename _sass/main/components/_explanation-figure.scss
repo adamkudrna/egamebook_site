@@ -1,9 +1,12 @@
-.scheme-figure {
+// Explanation figure demonstrates how the product works.
+// Classes here are quite specific and not intended to be reused.
+
+.explanation-figure {
     text-align: center;
 }
 
-.scheme-figure__media,
-.scheme-figure__quote {
+.explanation-figure__media,
+.explanation-figure__quote {
     max-width: 25rem;
     height: spacing(7);
     margin-right: auto;
@@ -22,13 +25,13 @@
     }
 }
 
-.scheme-figure__media__image,
-.scheme-figure__quote {
+.explanation-figure__media__image,
+.explanation-figure__quote {
     border: $border-width solid currentColor;
     border-radius: $border-radius;
 }
 
-.scheme-figure__media__image {
+.explanation-figure__media__image {
     display: block;
     width: 100%;
     height: 100%;
@@ -42,7 +45,7 @@
     }
 }
 
-.scheme-figure__quote {
+.explanation-figure__quote {
     display: flex;
     align-items: center;
     justify-content: center;
