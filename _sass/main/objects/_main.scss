@@ -1,8 +1,8 @@
+// Main content area sits between Header and Footer and should be used just once on page.
+
 .main {
     padding-top: spacing(4);
     padding-bottom: spacing(1);
-    color: map-get($colors-grays, gray-darkest);
-    background-color: map-get($colors-grays, white);
 
     @include breakpoint-up(sm) {
         padding-bottom: spacing(3);

@@ -10,23 +10,23 @@ description: >-
 <header class="header">
     <div class="container">
 
-        <h1 class="typography-title">
+        <h1 class="u-typography-title">
             <a href="{{ site.url }}">{{ site.name }}</a>
         </h1>
 
         <div class="grid">
             <div class="grid__item grid__item--header-headline">
 
-                <h2 class="typography-master-headline">
+                <h2 class="u-typography-master-headline">
                     A Dungeon<br />
                     Master<br />
-                    <span class="typography-master-subheadline">in Your Pocket</span>
+                    <span class="u-typography-master-subheadline">in Your Pocket</span>
                 </h2>
 
             </div>
             <div class="grid__item grid__item--header-perex">
 
-                <p class="typography-perex">
+                <p class="u-typography-perex">
                     Imagine reading a&nbsp;book where you can do much more than just choose a&nbsp;path. Imagine a&nbsp;book where your actions have realistic and meaningful impact on the fictional, simulated world.
                 </p>
 
@@ -61,13 +61,13 @@ description: >-
 
     </div>
 </header>
-<main class="main">
+<main class="main u-color-variant-light">
     <section class="section">
         <div class="container">
 
-            <h2 class="typography-headline1">
+            <h2 class="u-typography-headline1">
                 Games Should Be&nbsp;Epic<br />
-                <span class="typography-subheadline1">Not in graphics or voice acting, but in stories told and&nbsp;choices&nbsp;given</span>
+                <span class="u-typography-subheadline1">Not in graphics or voice acting, but in stories told and&nbsp;choices&nbsp;given</span>
             </h2>
 
             <div class="grid">
@@ -81,7 +81,7 @@ description: >-
                 <div class="grid__item grid__item--figure-left">
 
                     <div class="container__expand">
-                        <figure class="figure figure--spaced figure--scene">
+                        <figure class="figure figure--scene">
                             <div class="figure__media">
                                 <img
                                     src="/img/shooting-the-bandit.jpg?v=2019021201"
@@ -98,23 +98,23 @@ description: >-
         </div>
     </section>
 
-    <section class="interlude">
+    <section class="panel u-color-variant-dark">
         <div class="container">
 
-            <h2 class="typography-headline1">
+            <h2 class="u-typography-headline1">
                 Simulation,<br />
                 rendered in&nbsp;text<br />
-                <span class="typography-subheadline1">Not just pre-written paragraphs</span>
+                <span class="u-typography-subheadline1">Not just pre-written paragraphs</span>
             </h2>
 
-            <div class="scheme-layout">
-                <div class="scheme__item scheme-layout__item--1">
+            <div class="pyramid-layout">
+                <div class="pyramid-layout__item pyramid-layout__item--1">
 
-                    <figure class="scheme-figure">
-                        <div class="scheme-figure__media">
+                    <figure class="explanation-figure">
+                        <div class="explanation-figure__media">
                             <img
                                 src="/img/ralof-outline.svg?v=2019040501"
-                                class="scheme-figure__media__image"
+                                class="explanation-figure__media__image"
                                 alt="Internal representation"
                             />
                         </div>
@@ -126,10 +126,10 @@ description: >-
                     </figure>
 
                 </div>
-                <div class="scheme__item scheme-layout__item--2">
+                <div class="pyramid-layout__item pyramid-layout__item--2">
 
-                    <figure class="scheme-figure">
-                        <div class="scheme-figure__media">
+                    <figure class="explanation-figure">
+                        <div class="explanation-figure__media">
                             <img
                                 src="/img/ralof-3d_400w@2x.jpg?v=2019040501"
                                 srcset="
@@ -140,7 +140,7 @@ description: >-
                                     (min-width: 48em) calc((100vw - 2 * 5.25rem - 1.75rem) / 2),
                                     calc(100vw - 2 * 1.75rem)
                                 "
-                                class="scheme-figure__media__image"
+                                class="explanation-figure__media__image"
                                 alt="Rendered in 3d"
                             />
                         </div>
@@ -152,11 +152,11 @@ description: >-
                     </figure>
 
                 </div>
-                <div class="scheme__item scheme-layout__item--3">
+                <div class="pyramid-layout__item pyramid-layout__item--3">
 
-                    <figure class="scheme-figure">
-                        <div class="scheme-figure__quote">
-                            <blockquote class="typography-blockquote">
+                    <figure class="explanation-figure">
+                        <div class="explanation-figure__quote">
+                            <blockquote class="u-typography-blockquote">
                                 Behind <strong class="u-highlight u-highlight--yellow">Ralof’s</strong> back,
                                 and beyond a&nbsp;large <strong class="u-highlight u-highlight--turquoise">rock formation</strong>,
                                 you see a&nbsp;sleeping&nbsp;<strong class="u-highlight u-highlight--magenta">bear</strong>.
@@ -178,9 +178,9 @@ description: >-
     <section class="section">
         <div class="container">
 
-            <h2 class="typography-headline1">
+            <h2 class="u-typography-headline1">
                 App-Class User Experience<br />
-                <span class="typography-subheadline1">Respects your time and your&nbsp;phone</span>
+                <span class="u-typography-subheadline1">Respects your time and your&nbsp;phone</span>
             </h2>
 
             <div class="grid">
@@ -191,26 +191,11 @@ description: >-
                     <p>The design of the game is deliberately as close to a reading app as possible. No superficial animations, thrown dice, or skeuomorphic buttons. The game interface is clean and minimal. If a random stranger looks over your shoulder, they won’t think you’re playing a text-heavy videogame. They will think you’re reading a new kind of book.</p>
                     <p>When we’re commuting or when we manage to steal those few minutes of “me” time, we’re not whipping out a <em>PlayStation</em> with <em>Uncharted</em> or a PC with <em>Skyrim</em> or a <em>Switch</em> with <em>Fortnite</em>. Even if we do, how well are we able to get into flow in the limited time and space available to us?</p>
 
-                    {% comment %}
-                    <!-- We don’t currently need collapsing content, but it’s here. -->
-                    <input type="checkbox" id="collapsible" class="collapsible-input" />
-                    <label
-                        for="collapsible"
-                        class="typography-note typography-link collapsible-label"
-                        data-uncollapsed-text="Show less"
-                    >
-                        <span class="collapsible-label__text">Read more</span>
-                    </label>
-                    <div class="collapsible-content">
-                        <p>POTENTIALLY ADD MORE HERE</p>
-                    </div>
-                    {% endcomment %}
-
                 </div>
                 <div class="grid__item grid__item--figure-right">
 
                     <div class="container__expand">
-                        <figure class="figure figure--spaced figure--portrait">
+                        <figure class="figure figure--portrait">
                             <div class="figure__media">
                                 <img
                                     src="/img/bandit.jpg?v=2019021201"
@@ -235,10 +220,10 @@ description: >-
     <section class="section">
         <div class="container">
 
-            <h2 class="typography-headline1">
+            <h2 class="u-typography-headline1">
                 Fewer Numbers,<br />
                 More Immersion<br />
-                <span class="typography-subheadline1">Leave the math to the Dungeon&nbsp;Master</span>
+                <span class="u-typography-subheadline1">Leave the math to the Dungeon&nbsp;Master</span>
             </h2>
 
             <div class="grid">
@@ -251,7 +236,7 @@ description: >-
                 <div class="grid__item grid__item--figure-left">
 
                     <div class="container__expand">
-                        <figure class="figure figure--spaced figure--bandits">
+                        <figure class="figure figure--bandits">
                             <div class="figure__media">
                                 <img
                                     src="/img/huerfano-bill-the-bandit.png?v=2019030501"
@@ -271,9 +256,9 @@ description: >-
     <section class="section">
         <div class="container">
 
-            <h2 class="typography-headline1">
+            <h2 class="u-typography-headline1">
                 Introspective Leisure<br />
-                <span class="typography-subheadline1">Read a book, play chess, explore an&nbsp;Egamebook</span>
+                <span class="u-typography-subheadline1">Read a book, play chess, explore an&nbsp;Egamebook</span>
             </h2>
 
             <div class="grid">
@@ -287,7 +272,7 @@ description: >-
                 <div class="grid__item grid__item--figure-right">
 
                     <div class="container__expand">
-                        <figure class="figure figure--spaced figure--chess">
+                        <figure class="figure figure--chess">
                             <div class="figure__media">
                                 <img
                                     src="/img/introspective-leisure.jpg?v=2019021201"
@@ -313,9 +298,9 @@ description: >-
 <footer class="footer">
     <div class="container">
 
-        <h2 class="typography-headline1">
+        <h2 class="u-typography-headline1">
             Where to get&nbsp;it<br />
-            <span class="typography-subheadline1">Enough said, now show&nbsp;me</span>
+            <span class="u-typography-subheadline1">Enough said, now show&nbsp;me</span>
         </h2>
 
         <div class="grid">
@@ -368,9 +353,9 @@ description: >-
             </div>
             <div class="grid__item grid__item--footer-note">
 
-                <h3 class="typography-headline3">Current Status</h3>
-                <p class="typography-note">The system is being developed along with a sword-and-sorcery story. An early prototype version of the story, called «&nbsp;Insignificant Little Vermin&nbsp;», was released in 2017. You can play that early version in your web browser.</p>
-                <p class="typography-note">The current version is miles ahead of the 2017 prototype, and is being developed as an app for iOS and Android.</p>
+                <h3 class="u-typography-headline3">Current Status</h3>
+                <p class="u-typography-note">The system is being developed along with a sword-and-sorcery story. An early prototype version of the story, called «&nbsp;Insignificant Little Vermin&nbsp;», was released in 2017. You can play that early version in your web browser.</p>
+                <p class="u-typography-note">The current version is miles ahead of the 2017 prototype, and is being developed as an app for iOS and Android.</p>
 
             </div>
         </div>

@@ -1,3 +1,5 @@
+// Common layout patterns designed for content with illustrative images.
+
 .grid {
     @include breakpoint-up(md) {
         @include grid-template();

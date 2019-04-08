@@ -1,3 +1,21 @@
+// Figure foundation properly places illustrations inside text content.
+// Since individual illustrations significantly vary in size, amount of details and nature of edges,
+// each illustration needs its own, non-reusable modification to define its behaviour in layout.
+
+.figure {
+    padding-top: spacing(2);
+    padding-bottom: spacing(1);
+
+    @include breakpoint-up(sm) {
+        padding-top: spacing(3);
+        padding-bottom: 0;
+    }
+
+    @include breakpoint-up(lg) {
+        padding-top: 0;
+    }
+}
+
 .figure__media {
     overflow: hidden;
 }
@@ -24,20 +42,7 @@
     }
 }
 
-.figure--spaced {
-    padding-top: spacing(2);
-    padding-bottom: spacing(1);
-
-    @include breakpoint-up(sm) {
-        padding-top: spacing(3);
-        padding-bottom: 0;
-    }
-
-    @include breakpoint-up(lg) {
-        padding-top: 0;
-    }
-}
-
+// Individual modifications
 .figure--bandits .figure__media,
 .figure--chess .figure__media,
 .figure--scene .figure__media {

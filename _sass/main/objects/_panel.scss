@@ -1,10 +1,12 @@
-.interlude {
+// Panel, unlike Section, provides vertically symmetrical spacing to its content.
+// Panels work great with color-variant utilities when you need to put featured content on contrast
+// background.
+
+.panel {
     padding-top: spacing(3);
     padding-bottom: spacing(3);
     margin-top: spacing(1);
     margin-bottom: spacing(2);
-    color: map-get($colors-grays, white);
-    background-color: map-get($colors-grays, gray-darkest);
 
     @include breakpoint-up(sm) {
         padding-top: spacing(4);

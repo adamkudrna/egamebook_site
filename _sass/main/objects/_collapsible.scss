@@ -1,3 +1,14 @@
+// Toggle additional content on small screens with pure CSS.
+//
+// Example HTML:
+// <input type="checkbox" id="collapsible" class="collapsible-input" />
+// <label for="collapsible" class="collapsible-label" data-uncollapsed-text="Show less">
+//     <span class="collapsible-label__text">Read more</span>
+// </label>
+// <div class="collapsible-content">
+//     Content to be collapsed.
+// </div>
+
 .collapsible-input {
     display: none;
 }

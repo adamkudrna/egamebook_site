@@ -1,4 +1,4 @@
-.scheme-layout {
+.pyramid-layout {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
@@ -20,7 +20,7 @@
 }
 
 @include breakpoint-up(md) {
-    .scheme-layout__item--1 {
+    .pyramid-layout__item--1 {
         grid-column: 4 / span 6;
 
         // Emulate grid row gap in IE
@@ -29,12 +29,12 @@
         }
     }
 
-    .scheme-layout__item--2 {
+    .pyramid-layout__item--2 {
         grid-column: 1 / span 6;
         grid-row: 2; // specify row for IE
     }
 
-    .scheme-layout__item--3 {
+    .pyramid-layout__item--3 {
         grid-column: 7 / span 6;
         grid-row: 2; // specify row for IE
     }
