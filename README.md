@@ -9,6 +9,10 @@ Use `make` to build, serve and deploy. For example:
 * `$ make deploy` to upload to Firebase
 * `$ make clean` to clean up all generated files, useful for a clean build
 
+## Video on site
+
+The homepage has a video screencast of the game in action. To get it, record a device screen with the correct screen ratio (480 x 984). Then compress the video using something like [VideoSmaller](http://www.videosmaller.com/) with width of 480 pixels. (The site has better results than whichever command line tool and preset I've tried so far.)
+
 ## Before Deploying
 
 ### Invalidate cached assets
