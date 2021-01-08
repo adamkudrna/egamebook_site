@@ -28,4 +28,5 @@ clean:
 	rm -fr .sass-cache/
 	rm -fr _css/
 	rm -fr _site/
+	rm -fr node_modules/
 	rm -f .full_build.intermediate
