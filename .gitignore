@@ -4,6 +4,7 @@
 _css
 _site
 node_modules
+vendor/bundle
 .idea/
 .DS_Store
 .firebase/
