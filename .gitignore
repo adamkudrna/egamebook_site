@@ -3,6 +3,7 @@
 .full_build.intermediate
 _css
 _site
+build
 node_modules
 vendor/bundle
 .idea/

@@ -1,0 +1,96 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+      - prod
+  pull_request:
+    branches:
+      - master
+      - prod
+
+jobs:
+  build_and_test:
+    name: Build and test
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Leverage Node modules cache
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-node-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-node-${{ env.cache-name }}-
+            ${{ runner.os }}-build-node-
+
+      - name: Leverage Ruby gems cache
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-ruby-gems
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      - name: Build Jekyll site
+        uses: helaili/jekyll-action@v2
+        with:
+          build_only: true
+
+      - name: Upload Jekyll site
+        uses: actions/upload-artifact@v2
+        with:
+          name: site
+          path: build/*
+
+      - name: Install Node modules
+        run: npm ci
+
+      - name: Build front-end assets
+        run: npm run build
+
+      - name: Test front-end assets
+        run: npm test
+
+      - name: Upload front-end assets
+        uses: actions/upload-artifact@v2
+        with:
+          name: site
+          path: _site/*
+
+  deploy:
+    name: Deploy
+    needs: build_and_test
+    if: |
+      github.event_name == 'push'
+      && github.ref == 'refs/heads/prod'
+      && github.repository == 'filiph/egamebook_site'
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: site
+          path: _site
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@v2.0.0
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
