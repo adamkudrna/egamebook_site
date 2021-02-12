@@ -16,7 +16,8 @@
     "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.18.0"
+    "stylelint-scss": "^3.18.0",
+    "superstatic": "^7.1.0"
   },
   "scripts": {
     "css:lint": "stylelint --syntax scss \"_sass/main/**/*.scss\"",
@@ -24,7 +25,7 @@
     "css:build": "node-sass _sass/main/main.scss --output-style expanded --source-map true --source-map-contents true --output _css && postcss _css/main.css --replace && cleancss _css/main.css --level 1 --output _site/css/main.min.css",
     "css:watch": "chokidar \"_sass/main/**/*.scss\" --command \"npm run css:lint && npm run css:build\"",
     "build": "npm run css:lint && npm run css:build",
-    "dev": "npm run build && concurrently \"npm run css:watch\" \"browser-sync http://0.0.0.0:5000 _site -w --no-open\"",
+    "dev": "npm run build && concurrently \"npm run superstatic --port 5000\" \"npm run css:watch\" \"browser-sync http://0.0.0.0:5000 _site -w --no-open\"",
     "test": "npm run css:lint"
   },
   "repository": {
