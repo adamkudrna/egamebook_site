@@ -34,6 +34,7 @@ exclude:
   - makefile
   - node_modules
   - postcss.config.js
+  - vendor/bundle
   - .idea
 
 keep_files:
