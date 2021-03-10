@@ -1,62 +1,62 @@
 // 1. Settings
 // Global variables, config switches. Not producing any CSS.
-@import "settings/borders";
-@import "settings/breakpoints";
-@import "settings/collapsible";
-@import "settings/colors";
-@import "settings/grid";
-@import "settings/shadows";
-@import "settings/typography";
+@import "01-settings/borders";
+@import "01-settings/breakpoints";
+@import "01-settings/collapsible";
+@import "01-settings/colors";
+@import "01-settings/grid";
+@import "01-settings/shadows";
+@import "01-settings/typography";
 
 // 2. Tools
 // Default mixins and functions. Still not producing any CSS.
-@import "tools/breakpoints";
-@import "tools/grid";
-@import "tools/ie-only";
-@import "tools/spacing";
-@import "tools/transitions";
-@import "tools/typography";
+@import "02-tools/breakpoints";
+@import "02-tools/grid";
+@import "02-tools/ie-only";
+@import "02-tools/spacing";
+@import "02-tools/transitions";
+@import "02-tools/typography";
 
 // 3. Generic
 // Ground-zero styles.
-@import "generic/fonts";
-@import "generic/box-sizing";
-@import "generic/reset";
-@import "generic/selection";
-@import "generic/ie11";
-@import "generic/print";
+@import "03-generic/fonts";
+@import "03-generic/box-sizing";
+@import "03-generic/reset";
+@import "03-generic/selection";
+@import "03-generic/ie11";
+@import "03-generic/print";
 
 // 4. Elements
 // Unclassed HTML elements (type selectors).
-@import "elements/elements";
+@import "04-elements/elements";
 
 // 5. Objects
 // Cosmetic-free design patterns.
-@import "objects/collapsible";
-@import "objects/container";
-@import "objects/cta-layout";
-@import "objects/figure";
-@import "objects/grid";
-@import "objects/main";
-@import "objects/panel";
-@import "objects/pyramid-layout";
-@import "objects/section";
-@import "objects/signup";
+@import "05-objects/collapsible";
+@import "05-objects/container";
+@import "05-objects/cta-layout";
+@import "05-objects/figure";
+@import "05-objects/grid";
+@import "05-objects/main";
+@import "05-objects/panel";
+@import "05-objects/pyramid-layout";
+@import "05-objects/section";
+@import "05-objects/signup";
 
 // 6. Components
 // Actual UI components.
-@import "components/button";
-@import "components/explanation-figure";
-@import "components/footer";
-@import "components/header";
-@import "components/icon-box";
-@import "components/phone";
-@import "components/textfield";
-@import "components/tooltip";
+@import "06-components/button";
+@import "06-components/explanation-figure";
+@import "06-components/footer";
+@import "06-components/header";
+@import "06-components/icon-box";
+@import "06-components/phone";
+@import "06-components/textfield";
+@import "06-components/tooltip";
 
 // 7. Utilities
 // Helpers and overrides.
-@import "utilities/color-variant";
-@import "utilities/highlight";
-@import "utilities/print";
-@import "utilities/typography";
+@import "07-utilities/color-variant";
+@import "07-utilities/highlight";
+@import "07-utilities/print";
+@import "07-utilities/typography";
