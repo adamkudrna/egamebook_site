@@ -1,28 +1,28 @@
-.u-typography-master-headline {
+.h-typography-master-headline {
     @include typography(master-headline);
 }
 
-.u-typography-master-subheadline {
+.h-typography-master-subheadline {
     @include typography(master-subheadline);
 }
 
-.u-typography-headline1 {
+.h-typography-headline1 {
     @include typography(headline1);
 }
 
-.u-typography-subheadline1 {
+.h-typography-subheadline1 {
     @include typography(subheadline1);
 }
 
-.u-typography-headline2 {
+.h-typography-headline2 {
     @include typography(headline2);
 }
 
-.u-typography-headline3 {
+.h-typography-headline3 {
     @include typography(headline3);
 }
 
-.u-typography-title {
+.h-typography-title {
     @include typography(title);
 
     &:only-child {
@@ -36,13 +36,13 @@
     }
 }
 
-.u-typography-hanging-list {
+.h-typography-hanging-list {
     @include breakpoint-up(lg) {
         margin-left: -$typography-list-padding-left;
     }
 }
 
-.u-typography-perex {
+.h-typography-perex {
     max-width: 32ch;
 
     &::first-line {
@@ -61,17 +61,17 @@
     }
 }
 
-.u-typography-note {
+.h-typography-note {
     @include typography(body);
 
     font-style: italic;
 }
 
-.u-typography-blockquote {
+.h-typography-blockquote {
     @include typography(blockquote);
 }
 
-.u-typography-link {
+.h-typography-link {
     position: relative;
     white-space: nowrap;
 

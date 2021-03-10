@@ -1,4 +1,4 @@
-.u-highlight {
+.h-highlight {
     padding: 0.05em 0.4em;
     white-space: nowrap;
     border-radius: $border-radius;
@@ -6,7 +6,7 @@
 }
 
 @each $key, $value in $colors {
-    .u-highlight--#{$key} {
+    .h-highlight--#{$key} {
         color: $value;
         background-color: transparentize($value, 0.75);
     }

@@ -1,9 +1,9 @@
-.u-color-variant-light {
+.h-color-variant-light {
     color: map-get($colors-grays, gray-darkest);
     background-color: map-get($colors-grays, white);
 }
 
-.u-color-variant-dark {
+.h-color-variant-dark {
     color: map-get($colors-grays, white);
     background-color: map-get($colors-grays, gray-darkest);
 }
