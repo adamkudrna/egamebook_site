@@ -1,0 +1,9 @@
+.video {
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - #{spacing(3)});
+
+    @include breakpoint-up(lg) {
+        max-height: calc(100vh - #{spacing(5)});
+    }
+}

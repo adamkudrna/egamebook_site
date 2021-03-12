@@ -1,4 +1,4 @@
-@import "../settings/typography";
+@import "../01-settings/typography";
 
 @function spacing($value) {
     @if ($value % 1 != 0) {

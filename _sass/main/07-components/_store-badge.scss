@@ -1,0 +1,28 @@
+@mixin _badge-size($base-height, $added-height: 0) {
+    height: $base-height + $added-height;
+    margin-top: -1 * $added-height / 2;
+    margin-bottom: -1 * $added-height / 2;
+    border-radius: 0.5rem + $added-height / 6;
+}
+
+.store-badge {
+    @include _badge-size(spacing(2));
+    @include transition(box-shadow);
+
+    display: block;
+    width: auto;
+
+    &:focus,
+    &:active {
+        outline: 0;
+        box-shadow: $shadow-highlight;
+    }
+
+    @include breakpoint-up(sm) {
+        @include _badge-size(spacing(2), 0.5rem);
+    }
+
+    @include breakpoint-up(md) {
+        @include _badge-size(spacing(2), 1rem);
+    }
+}
