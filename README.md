@@ -34,6 +34,20 @@ Should you encounter an installation error saying [_Could not create Makefile
 due to some reason_](https://github.com/ffi/ffi/issues/286), make sure you have
 [XCode Command Line Tools installed](https://stackoverflow.com/questions/9329243/how-to-install-xcode-command-line-tools).
 
+### Apple M1 errors
+
+One of the dependencies (`redcarpet`) uses `ffi` and fails
+on ARM architectures (like Apple's M1 / Silicon) with 
+`"missing compatible arch"`. To avoid this, run bundler (and later jekyll)
+in compatibility mode:
+
+```shell
+arch -arch x86_64 bundle install --path vendor/bundle
+```
+
+(The `--path` argument is to avoid installing with `sudo`, another recent
+change.)
+
 ## Development
 
 For local development run:
@@ -46,6 +60,12 @@ This runs Jekyll in watch mode, watches front-end assets for changes with
 npm, and serves the site at `http://localhost:3000` (see the script source 
 to learn more). Thanks to [BrowserSync](https://www.browsersync.io) running 
 in background the site is available across local network.
+
+### Apple M1 version
+
+```shell
+sh serve_m1.sh
+```
 
 ### Video on Site
 
