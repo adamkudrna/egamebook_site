@@ -1,20 +1,12 @@
 .badge-layout {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: min-content min-content;
+    grid-column-gap: 0.5 * $grid-gap;
     grid-row-gap: spacing(1);
-    justify-items: center;
-    margin-top: spacing(4);
-    margin-bottom: spacing(8);
+    justify-content: center;
 
     @include breakpoint-up(sm) {
-        grid-template-columns: min-content min-content;
         grid-column-gap: $grid-gap;
-        justify-content: center;
-    }
-
-    @include breakpoint-up(md) {
-        margin-top: spacing(6);
-        margin-bottom: spacing(10);
     }
 
     @include breakpoint-up(lg) {

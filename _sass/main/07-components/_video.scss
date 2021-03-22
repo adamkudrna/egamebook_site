@@ -1,9 +1,37 @@
 .video {
     width: 100%;
-    height: auto;
-    max-height: calc(100vh - #{spacing(3)});
+    height: spacing(16);
+
+    @include breakpoint-up(sm) {
+        height: spacing(17);
+    }
+
+    @include breakpoint-up(md) {
+        height: spacing(18);
+    }
 
     @include breakpoint-up(lg) {
-        max-height: calc(100vh - #{spacing(5)});
+        height: spacing(20);
     }
+
+    @include breakpoint-up(xl) {
+        height: spacing(22);
+    }
+
+    @include breakpoint-up(x2l) {
+        height: spacing(24);
+    }
+
+    @include breakpoint-up(x3l) {
+        height: spacing(26);
+    }
+
+    @include breakpoint-up(x4l) {
+        height: spacing(28);
+    }
+}
+
+.video__player {
+    width: 100%;
+    height: 100%;
 }
