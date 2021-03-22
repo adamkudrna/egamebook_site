@@ -1,12 +1,12 @@
-@mixin _badge-size($base-height, $added-height: 0) {
-    height: $base-height + $added-height;
+@mixin _badge-size($baseline-height, $added-height: 0) {
+    height: spacing($baseline-height) + $added-height;
     margin-top: -1 * $added-height / 2;
     margin-bottom: -1 * $added-height / 2;
     border-radius: 0.5rem + $added-height / 6;
 }
 
 .store-badge {
-    @include _badge-size(spacing(2));
+    @include _badge-size($baseline-height: 2, $added-height: -0.5rem);
     @include transition(box-shadow);
 
     display: block;
@@ -19,10 +19,10 @@
     }
 
     @include breakpoint-up(sm) {
-        @include _badge-size(spacing(2), 0.5rem);
+        @include _badge-size($baseline-height: 2);
     }
 
-    @include breakpoint-up(md) {
-        @include _badge-size(spacing(2), 1rem);
+    @include breakpoint-up(lg) {
+        @include _badge-size($baseline-height: 2, $added-height: 0.5rem);
     }
 }
