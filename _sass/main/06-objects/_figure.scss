@@ -4,11 +4,9 @@
 
 .figure {
     padding-top: spacing(2);
-    padding-bottom: spacing(1);
 
     @include breakpoint-up(sm) {
         padding-top: spacing(3);
-        padding-bottom: 0;
     }
 
     @include breakpoint-up(lg) {
@@ -48,6 +46,15 @@
 .figure--scene .figure__media {
     margin-right: auto;
     margin-left: auto;
+}
+
+.figure--bandits,
+.figure--portrait {
+    padding-bottom: spacing(1);
+
+    @include breakpoint-up(sm) {
+        padding-bottom: 0;
+    }
 }
 
 .figure--bandits .figure__media {

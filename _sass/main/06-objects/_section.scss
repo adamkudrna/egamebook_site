@@ -1,12 +1,49 @@
 // Section provides proper vertical spacing to text content introduced by headline.
-// Section is designed to be daisy-chained.
+// Section is designed to be daisy-chained. Modifications can be used to tweak spacing
+// of neighbouring sections.
 
 .section {
+    padding-top: spacing(3);
+    padding-bottom: spacing(3);
+
+    @include breakpoint-up(sm) {
+        padding-top: spacing(4);
+        padding-bottom: spacing(4);
+    }
+
+    @include breakpoint-up(md) {
+        padding-top: spacing(5);
+        padding-bottom: spacing(5);
+    }
+
+    @include breakpoint-up(lg) {
+        padding-top: spacing(6);
+        padding-bottom: spacing(6);
+    }
+}
+
+.section--dense {
     padding-top: spacing(1);
     padding-bottom: spacing(1);
 
+    @include breakpoint-up(lg) {
+        padding-top: spacing(2);
+        padding-bottom: spacing(2);
+    }
+}
+
+.section--dense-top {
+    padding-top: spacing(1);
+
     @include breakpoint-up(sm) {
         padding-top: spacing(2);
+    }
+}
+
+.section--dense-bottom {
+    padding-bottom: spacing(1);
+
+    @include breakpoint-up(sm) {
         padding-bottom: spacing(2);
     }
 
@@ -16,5 +53,13 @@
 
     @include breakpoint-up(lg) {
         padding-bottom: spacing(4);
+    }
+}
+
+.section--after-phone-cover {
+    padding-top: spacing(5);
+
+    @include breakpoint-up(lg) {
+        padding-top: spacing(6);
     }
 }
